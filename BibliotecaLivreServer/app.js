@@ -5,47 +5,12 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-
-//mongoose tutorial de acordo
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/BibliotecaLivre', function(error){
-	if(error){
-		console.log(error);
-	}
-});
-
-// Mongoose Schema definition
-var Schema = mongoose.Schema;
-
-var UserSchema = new Schema({
-    first_name: String,
-    last_name: String,
-    email: String
-});
-
-// Mongoose Model definition
-var User = mongoose.model('users', UserSchema);
-
+// open connection
+require('./public/javascripts/banco/ConexaoBanco');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
 
 var app = express();
-
-
-app.get('/users', function (req, res) {
-    User.find({}, function (err, docs) {
-        res.json(docs);
-    });
-});
-
-app.get('/users/:email', function (req, res) {
-    if (req.params.email) {
-        User.find({ email: req.params.email }, function (err, docs) {
-            res.json(docs);
-        });
-    }
-});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -60,7 +25,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
