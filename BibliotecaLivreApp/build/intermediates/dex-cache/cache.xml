@@ -21,12 +21,39 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/neto/GitHub/Express/BibliotecaLivre/BibliotecaLivreApp/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
+        <dex dex="/home/neto/GitHub/Express/BibliotecaLivre/BibliotecaLivreApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.1.0_2e3cdd0ecb4b1533586685b58172e7a5ceea25c1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/neto/GitHub/Express/BibliotecaLivre/BibliotecaLivreApp/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="b266c8faa5af72e579b9da36ef35053ffed6ac64">
         <dex dex="/home/neto/GitHub/Express/BibliotecaLivre/BibliotecaLivreApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.1.0_62608550828349b9bccda511844f73199dda2969/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neto/GitHub/Express/BibliotecaLivre/BibliotecaLivreApp/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="732ae65871a9f94d1b3f238d9b337993d5a1054b">
+        <dex dex="/home/neto/GitHub/Express/BibliotecaLivre/BibliotecaLivreApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_d332782d84e59dab6577810b5f019fb97569645e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neto/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.4/695b63d702f505b9b916e02272e3b6381bade7f/gson-2.4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
+        <dex dex="/home/neto/GitHub/Express/BibliotecaLivre/BibliotecaLivreApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.4_cca861740fa877131d78eaeb54e5fefb876f5d0e/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -48,33 +75,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/neto/GitHub/Express/BibliotecaLivre/BibliotecaLivreApp/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="aee64634871d88a419d59eb743c1258a60f19700">
-        <dex dex="/home/neto/GitHub/Express/BibliotecaLivre/BibliotecaLivreApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.1.0_cf898e80ab879b03cb0f9d7026cd059ca7db22bc/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/neto/GitHub/Express/BibliotecaLivre/BibliotecaLivreApp/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
-        <dex dex="/home/neto/GitHub/Express/BibliotecaLivre/BibliotecaLivreApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.1.0_2e3cdd0ecb4b1533586685b58172e7a5ceea25c1/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/neto/GitHub/Express/BibliotecaLivre/BibliotecaLivreApp/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="732ae65871a9f94d1b3f238d9b337993d5a1054b">
-        <dex dex="/home/neto/GitHub/Express/BibliotecaLivre/BibliotecaLivreApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_d332782d84e59dab6577810b5f019fb97569645e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/neto/GitHub/Express/BibliotecaLivre/BibliotecaLivreApp/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -84,11 +84,20 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/neto/GitHub/Express/BibliotecaLivre/BibliotecaLivreApp/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="aee64634871d88a419d59eb743c1258a60f19700">
+        <dex dex="/home/neto/GitHub/Express/BibliotecaLivre/BibliotecaLivreApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.1.0_cf898e80ab879b03cb0f9d7026cd059ca7db22bc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/neto/GitHub/Express/BibliotecaLivre/BibliotecaLivreApp/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="a75baa23d7ae634e2777b7d9791cd61e2c636ebd">
+        sha1="e18850eabe67ebb010a29af20d53798ba2197bcf">
         <dex dex="/home/neto/GitHub/Express/BibliotecaLivre/BibliotecaLivreApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_fcc326c0077adb004faf734d963e0acc1020dc54/classes.dex" />
     </item>
     <item

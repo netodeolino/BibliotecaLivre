@@ -11,6 +11,12 @@ router.get('/', function(req, res, next) {
 router.get('/users', UserController.showUsers);
 router.post('/saveuser', UserController.saveUser);
 
+router.get('/teste', UserController.teste);
+
+//router.get('/teste', function(req, res, next) {
+//	res.render('index', { title: 'Teste Passou' });
+//});
+
 /*
 router.get('/users/:email', function (req, res) {
     if (req.params.email) {

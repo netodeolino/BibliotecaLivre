@@ -14,12 +14,14 @@ import com.google.gson.Gson;
 
 public class ServerRequest {
 
-    private static final String SERVER = "http://192.168.1.18:3000/";
+    private static final String SERVER = "http://192.168.0.112:3000/";
     public static final String LOGIN = "login";
     public static final String GET_ROLES = "roles";
     public static final String GET_TRAINEE_TEAMS = "team/trainee/";
     public static final String CREATE_ACCOUNT = "trainee";
     public static final String PRESENCE_TRAINEE = "trainee/presence/device";
+
+    public static final String TESTE = "teste";
 
 
     private OptimusHTTP client;

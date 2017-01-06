@@ -8,6 +8,13 @@ exports.showUsers = function (req, res, next) {
     });
 }
 
+exports.teste = function (req, res, next) {
+	// body...
+	User.find({}, function (err, docs) {
+        res.json(docs);
+    });
+}
+
 exports.saveUser = function (req, res, next) {
 	new User({
 		first_name: req.body.first_name,

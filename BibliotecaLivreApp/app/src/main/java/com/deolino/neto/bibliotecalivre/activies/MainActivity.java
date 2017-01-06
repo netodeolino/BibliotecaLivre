@@ -11,10 +11,16 @@ import android.view.MenuItem;
 import android.widget.ListView;
 
 import com.deolino.neto.bibliotecalivre.R;
+import com.deolino.neto.bibliotecalivre.interfaces.ServerResponseListener;
+import com.deolino.neto.bibliotecalivre.model.User;
+import com.deolino.neto.bibliotecalivre.server.Response;
+import com.deolino.neto.bibliotecalivre.server.ServerRequest;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ServerResponseListener {
 
-    ListView listView;
+    private User user;
+    private ServerRequest request;
+    private ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        this.request = new ServerRequest(this, this);
+        this.user = new User();
+        this.user.setId("1"); //NÃO TENHO LOGIN
 
         listView = ( ListView )findViewById( R.id.listview );
 
@@ -55,5 +65,19 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void getTeste(View view){
+        request.get(ServerRequest.TESTE, null);
+    }
+
+    @Override
+    public void onSuccess(Response response, String requestUrl) {
+
+    }
+
+    @Override
+    public void onFailure(Response response, String requestUrl) {
+
     }
 }

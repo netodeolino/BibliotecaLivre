@@ -29,4 +29,10 @@
         android:id="@+id/listview">
     </ListView>
 
+    <Button
+        android:layout_width="match_parent"
+        android:onClick="getTeste"
+        android:layout_height="wrap_content"
+        android:id="@+id/button" />
+
 </RelativeLayout>
