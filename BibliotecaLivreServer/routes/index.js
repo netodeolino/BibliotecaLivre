@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/users', UserController.showUsers);
-
+router.post('/saveuser', UserController.saveUser);
 
 /*
 router.get('/users/:email', function (req, res) {

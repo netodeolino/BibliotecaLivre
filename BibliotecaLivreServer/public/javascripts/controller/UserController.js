@@ -7,3 +7,13 @@ exports.showUsers = function (req, res, next) {
         res.json(docs);
     });
 }
+
+exports.saveUser = function (req, res, next) {
+	new User({
+		first_name: req.body.first_name,
+    	last_name: req.body.last_name,
+    	email: req.body.email
+	}).save(function(err, user, count){
+		res.redirect('/');
+	});
+}
