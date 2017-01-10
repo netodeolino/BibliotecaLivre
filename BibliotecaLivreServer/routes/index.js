@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 	res.render('index', { title: 'Biblioteca Livre' });
 });
 
-router.get('/users', UserController.showUsers);
+router.get('/users', UserController.allUsers);
 router.post('/saveuser', UserController.saveUser);
 
 router.get('/teste/:first_name', UserController.teste);
