@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
 router.get('/users', UserController.showUsers);
 router.post('/saveuser', UserController.saveUser);
 
-router.get('/teste', UserController.teste);
+router.get('/teste/:first_name', UserController.teste);
 
 //router.get('/teste', function(req, res, next) {
 //	res.render('index', { title: 'Teste Passou' });

@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
     }
 
     public void getTeste(View view){
-        request.get(ServerRequest.TESTE, null);
+        request.get(ServerRequest.TESTE, "Neto");
     }
 
     @Override

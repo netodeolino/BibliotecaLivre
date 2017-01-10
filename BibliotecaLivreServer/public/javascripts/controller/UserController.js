@@ -10,7 +10,10 @@ exports.showUsers = function (req, res, next) {
 
 exports.teste = function (req, res, next) {
 	// body...
-	User.find({}, function (err, docs) {
+
+	var name = req.params.first_name;
+
+	User.find({first_name: name}, function (err, docs) {
         res.json(docs);
     });
 }

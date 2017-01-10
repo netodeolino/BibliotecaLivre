@@ -21,7 +21,7 @@ public class ServerRequest {
     public static final String CREATE_ACCOUNT = "trainee";
     public static final String PRESENCE_TRAINEE = "trainee/presence/device";
 
-    public static final String TESTE = "teste";
+    public static final String TESTE = "teste/";
 
 
     private OptimusHTTP client;
