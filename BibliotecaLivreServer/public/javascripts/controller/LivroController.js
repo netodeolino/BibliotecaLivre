@@ -26,10 +26,28 @@ exports.findLivroByName = function (req, res, next) {
 	var nome = req.params.nome;
 
 	Livro.find({nome: nome}, function (err, docs) {
-        res.json(docs);
+		if (err) {
+			res.json({result: false, data: null});
+		}
+        res.json({result: true, data: docs});
     });
 }
 
+exports.removeLivroByName = function (req, res, next) {
+	// body...
+	var nome = req.params.nome;
+
+	Livro.find({nome: nome}, function (err, livro) {
+		livro.remove( function (err, livro) {
+			if (err) {
+				console.log(err);
+				res.json({result: false, data: null});
+			}
+			//res.redirect( '/' );
+			res.json({result: true, data: livro});
+		});
+	});
+};
 
 exports.teste = function (req, res, next) {
 	// body...
