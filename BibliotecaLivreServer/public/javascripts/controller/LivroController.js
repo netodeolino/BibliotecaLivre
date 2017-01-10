@@ -4,7 +4,10 @@ var Livro = mongoose.model('Livro');
 exports.allLivros = function (req, res, next) {
 	// body...
 	Livro.find({}, function (err, docs) {
-        res.json(docs);
+		if (err) {
+			res.json({result: false, data: null});
+		}
+        res.json({result: true, data: docs});
     });
 }
 
@@ -17,7 +20,10 @@ exports.saveLivro = function (req, res, next) {
     	categoria: req.body.categoria
 	}).save(function(err, livro, count){
 		//res.redirect('/');
-		res.json(livro);
+		if (err) {
+			res.json({result: false, data: null});
+		}
+		res.json({result: true, data: livro});
 	});
 }
 
@@ -49,9 +55,10 @@ exports.removeLivroByName = function (req, res, next) {
 	});
 };
 
+
+
 exports.teste = function (req, res, next) {
 	// body...
-
 	var name = req.params.first_name;
 
 	Livro.find({first_name: name}, function (err, docs) {
