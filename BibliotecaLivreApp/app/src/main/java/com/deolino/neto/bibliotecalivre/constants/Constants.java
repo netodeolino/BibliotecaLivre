@@ -23,4 +23,7 @@ public class Constants {
 
     //Log tag
     public static final String LOG_TAG = "LOG_BIBLIOTECA";
+
+    //Log test
+    public static final String LOG_TEST = "LOG_TEST";
 }

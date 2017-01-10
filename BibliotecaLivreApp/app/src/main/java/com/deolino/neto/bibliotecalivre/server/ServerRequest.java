@@ -22,6 +22,7 @@ public class ServerRequest {
     public static final String PRESENCE_TRAINEE = "trainee/presence/device";
 
     public static final String FIND_LIVRO_BY_NAME = "findlivrobyname/";
+    public static final String ALL_LIVROS = "livros/";
 
 
     private OptimusHTTP client;
