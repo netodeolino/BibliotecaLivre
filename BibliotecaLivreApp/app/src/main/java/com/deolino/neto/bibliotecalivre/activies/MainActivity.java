@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
     }
 
     public void getTeste(View view){
-        request.get(ServerRequest.TESTE, "Neto");
+        request.get(ServerRequest.FIND_LIVRO_BY_NAME, "limoeiro");
     }
 
     @Override
