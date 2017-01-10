@@ -28,6 +28,17 @@ exports.saveUser = function (req, res, next) {
 	});
 }
 
+
+/*
+router.get('/users/:email', function (req, res) {
+    if (req.params.email) {
+        User.find({ email: req.params.email }, function (err, docs) {
+            res.json(docs);
+        });
+    }
+});
+*/
+
 /* TO EDIT OF THE MY PROJECT
 // query db for all todo items
 exports.index = function ( req, res ){

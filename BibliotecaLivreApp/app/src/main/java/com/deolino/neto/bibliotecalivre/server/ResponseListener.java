@@ -37,6 +37,9 @@ public class ResponseListener implements OptimusHTTP.ResponseListener {
             Log.e("LOG", e.toString());
             res = new Response();
             res.setResult(false);
+
+            // TESTE DE ERRO
+
         }
         listener.onSuccess(res, this.requestCode);
     }
