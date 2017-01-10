@@ -8,6 +8,18 @@ exports.allLivros = function (req, res, next) {
     });
 }
 
+exports.saveLivro = function (req, res, next) {
+	new Livro({
+		nome: req.body.nome,
+    	ano: req.body.ano,
+    	ISBN: req.body.ISBN,
+    	autor: req.body.autor,
+    	categoria: req.body.categoria
+	}).save(function(err, livro, count){
+		res.redirect('/');
+	});
+}
+
 exports.teste = function (req, res, next) {
 	// body...
 
@@ -16,16 +28,6 @@ exports.teste = function (req, res, next) {
 	Livro.find({first_name: name}, function (err, docs) {
         res.json(docs);
     });
-}
-
-exports.saveUser = function (req, res, next) {
-	new Livro({
-		first_name: req.body.first_name,
-    	last_name: req.body.last_name,
-    	email: req.body.email
-	}).save(function(err, user, count){
-		res.redirect('/');
-	});
 }
 
 
