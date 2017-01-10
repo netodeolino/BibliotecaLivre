@@ -14,6 +14,8 @@ router.post('/saveuser', UserController.saveUser);
 
 router.get('/teste/:first_name', UserController.teste);
 
+router.get('/livros', LivroController.allLivros);
 router.post('/savelivro', LivroController.saveLivro);
+router.get('/findlivrobyname/:nome', LivroController.findLivroByName);
 
 module.exports = router;

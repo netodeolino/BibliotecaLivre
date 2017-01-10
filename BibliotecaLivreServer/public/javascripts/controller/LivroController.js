@@ -21,6 +21,16 @@ exports.saveLivro = function (req, res, next) {
 	});
 }
 
+exports.findLivroByName = function (req, res, next) {
+	// body...
+	var nome = req.params.nome;
+
+	Livro.find({nome: nome}, function (err, docs) {
+        res.json(docs);
+    });
+}
+
+
 exports.teste = function (req, res, next) {
 	// body...
 
