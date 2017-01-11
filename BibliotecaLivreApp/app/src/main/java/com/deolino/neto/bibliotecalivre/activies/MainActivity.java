@@ -10,6 +10,10 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.deolino.neto.bibliotecalivre.R;
 import com.deolino.neto.bibliotecalivre.constants.Constants;
@@ -22,12 +26,15 @@ import com.google.gson.internal.LinkedTreeMap;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements ServerResponseListener {
+public class MainActivity extends AppCompatActivity implements ServerResponseListener, AdapterView.OnItemSelectedListener {
 
     private User user;
     private Livro livrao;
 
     private ServerRequest request;
+
+    private Spinner spinner1;
+    private Spinner spinner2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +46,14 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
         this.request = new ServerRequest(this, this);
         this.user = new User();
         this.user.setId("1"); //NÃO TENHO LOGIN e isso não está sendo utilizado também no momento
+
+        this.spinner1 = (Spinner) findViewById(R.id.spinner1);
+        this.spinner2 = (Spinner) findViewById(R.id.spinner2);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.states_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner1.setAdapter(adapter);
+        spinner1.setOnItemSelectedListener(this);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -116,6 +131,17 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
 
     @Override
     public void onFailure(Response response, String requestUrl) {
+
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        String item = parent.getItemAtPosition(position).toString();
+        Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
 
     }
 }

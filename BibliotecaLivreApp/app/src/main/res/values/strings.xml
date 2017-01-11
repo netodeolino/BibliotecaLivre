@@ -19,4 +19,35 @@
     <string name="introduce_categoria">Digite a Categoria</string>
 
     <string name="create_livro">Cadastrar Livro</string>
+
+    <!-- Spinners -->
+    <string-array name="states_array">
+        <item>Ceará</item>
+        <item>Pernambuco</item>
+        <item>Bahia</item>
+        <item>Rio Grande do Norte</item>
+        <item>Pará</item>
+        <item>Maranhao</item>
+        <item>Amazonas</item>
+        <item>Acre</item>
+    </string-array>
+
+    <string-array name="cities_ceara_array">
+        <item>Limoeiro do Norte</item>
+        <item>Tabuleiro do Norte</item>
+        <item>Russas</item>
+        <item>Alto Santo</item>
+        <item>Quixada</item>
+        <item>Morada-Nova</item>
+        <item>Fortaleza</item>
+        <item>Horizonte</item>
+    </string-array>
+
+    <string-array name="cities_rn_array">
+        <item>Barauna</item>
+        <item>Mossoro</item>
+        <item>Natal</item>
+        <item>Apodi</item>
+    </string-array>
+
 </resources>
