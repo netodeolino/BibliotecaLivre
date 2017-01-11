@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -30,8 +29,6 @@ public class CreateLivroActivity extends AppCompatActivity implements ServerResp
     private EditText editTextISBN;
     private EditText editTextAutor;
     private EditText editTextCategoria;
-
-    private Button button;
 
     private Livro livro;
 
@@ -60,6 +57,19 @@ public class CreateLivroActivity extends AppCompatActivity implements ServerResp
         livro.setCategoria(editTextCategoria.getText().toString());
 
         serverRequest.post(ServerRequest.SAVE_LIVRO, livro);
+    }
+
+    private boolean checkEditText () {
+        final String nome = this.editTextNome.getText().toString();
+        final String ano = this.editTextAno.getText().toString();
+        final String ISBN = this.editTextISBN.getText().toString();
+        final String autor = this.editTextAutor.getText().toString();
+        final String categoria = this.editTextCategoria.getText().toString();
+
+        if (nome.isEmpty() || ano.isEmpty() || ISBN.isEmpty() || autor.isEmpty() || categoria.isEmpty()) {
+            return false;
+        }
+        return true;
     }
 
     @Override

@@ -138,6 +138,19 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String item = parent.getItemAtPosition(position).toString();
         Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
+
+        if (item.equals("CE")) {
+            ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.cities_ce_array, android.R.layout.simple_spinner_item);
+            adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            this.spinner2.setAdapter(adapter2);
+        }
+
+        if (item.equals("RN")) {
+            ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.cities_rn_array, android.R.layout.simple_spinner_item);
+            adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            this.spinner2.setAdapter(adapter2);
+        }
+
     }
 
     @Override

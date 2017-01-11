@@ -12,7 +12,7 @@
     <string name="autor">Autor</string>
     <string name="categoria">Categoria</string>
 
-    <string name="introduce_name">Digite o seu Nome</string>
+    <string name="introduce_name">Digite o nome do Livro</string>
     <string name="introduce_ano">Digite o Ano</string>
     <string name="introduce_ISBN">Digite o ISBN</string>
     <string name="introduce_autor">Digite o nome do Autor</string>
@@ -22,17 +22,36 @@
 
     <!-- Spinners -->
     <string-array name="states_array">
-        <item>Ceará</item>
-        <item>Pernambuco</item>
-        <item>Bahia</item>
-        <item>Rio Grande do Norte</item>
-        <item>Pará</item>
-        <item>Maranhao</item>
-        <item>Amazonas</item>
-        <item>Acre</item>
+        <item>AC</item>
+        <item>AL</item>
+        <item>AP</item>
+        <item>AM</item>
+        <item>BA</item>
+        <item>CE</item>
+        <item>DF</item>
+        <item>ES</item>
+        <item>GO</item>
+        <item>MA</item>
+        <item>MT</item>
+        <item>MS</item>
+        <item>MG</item>
+        <item>PA</item>
+        <item>PB</item>
+        <item>PR</item>
+        <item>PE</item>
+        <item>PI</item>
+        <item>RJ</item>
+        <item>RN</item>
+        <item>RS</item>
+        <item>RO</item>
+        <item>RR</item>
+        <item>SC</item>
+        <item>SP</item>
+        <item>SE</item>
+        <item>TO</item>
     </string-array>
 
-    <string-array name="cities_ceara_array">
+    <string-array name="cities_ce_array">
         <item>Limoeiro do Norte</item>
         <item>Tabuleiro do Norte</item>
         <item>Russas</item>
