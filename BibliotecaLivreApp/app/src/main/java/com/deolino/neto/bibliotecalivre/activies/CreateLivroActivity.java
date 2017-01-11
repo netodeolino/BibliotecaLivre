@@ -41,8 +41,6 @@ public class CreateLivroActivity extends AppCompatActivity implements ServerResp
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_livro);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         this.editTextNome = (EditText) findViewById(R.id.etCreateName);
         this.editTextAno = (EditText) findViewById(R.id.etCreateAno);
@@ -52,15 +50,6 @@ public class CreateLivroActivity extends AppCompatActivity implements ServerResp
 
         this.livro = new Livro();
         this.serverRequest = new ServerRequest(this, this);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
     public void createLivro (View view) {

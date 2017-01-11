@@ -1,5 +1,6 @@
 package com.deolino.neto.bibliotecalivre.activies;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -76,8 +77,10 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
     }
 
     public void getTeste(View view){
-        request.get(ServerRequest.FIND_LIVRO_BY_NAME, "limoeiro");
+        //request.get(ServerRequest.FIND_LIVRO_BY_NAME, "limoeiro");
         //request.get(ServerRequest.ALL_LIVROS, null);
+        Intent intent = new Intent(this, CreateLivroActivity.class);
+        startActivity(intent);
     }
 
     @Override
