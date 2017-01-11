@@ -10,7 +10,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ListView;
 
 import com.deolino.neto.bibliotecalivre.R;
 import com.deolino.neto.bibliotecalivre.constants.Constants;
@@ -29,7 +28,6 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
     private Livro livrao;
 
     private ServerRequest request;
-    private ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +39,6 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
         this.request = new ServerRequest(this, this);
         this.user = new User();
         this.user.setId("1"); //NÃO TENHO LOGIN e isso não está sendo utilizado também no momento
-
-        listView = ( ListView )findViewById( R.id.listview );
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -72,15 +68,18 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
         if (id == R.id.action_settings) {
             return true;
         }
+        if (id == R.id.action_create_livro) {
+            Intent intent = new Intent(this, CreateLivroActivity.class);
+            startActivity(intent);
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }
 
     public void getTeste(View view){
-        //request.get(ServerRequest.FIND_LIVRO_BY_NAME, "limoeiro");
+        request.get(ServerRequest.FIND_LIVRO_BY_NAME, "limoeiro");
         //request.get(ServerRequest.ALL_LIVROS, null);
-        Intent intent = new Intent(this, CreateLivroActivity.class);
-        startActivity(intent);
     }
 
     @Override
