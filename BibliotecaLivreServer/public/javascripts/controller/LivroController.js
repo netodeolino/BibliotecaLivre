@@ -57,16 +57,6 @@ exports.removeLivroByName = function (req, res, next) {
 
 
 
-exports.teste = function (req, res, next) {
-	// body...
-	var name = req.params.first_name;
-
-	Livro.find({first_name: name}, function (err, docs) {
-        res.json(docs);
-    });
-}
-
-
 /*
 router.get('/users/:email', function (req, res) {
     if (req.params.email) {

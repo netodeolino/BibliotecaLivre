@@ -13,6 +13,69 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <!-- Nome -->
+    <style name="tvNome">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="etNome">
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <!-- Ano -->
+    <style name="tvAno">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="etAno">
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <!-- ISBN -->
+    <style name="tvISBN">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="etISBN">
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <!-- Autor -->
+    <style name="tvAutor">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="etAutor">
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <!-- Categoria -->
+    <style name="tvCategoria">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="etCategoria">
+        <item name="android:textSize">20dp</item>
+    </style>
+
+
+    <style name="button">
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

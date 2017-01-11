@@ -8,16 +8,6 @@ exports.allUsers = function (req, res, next) {
     });
 }
 
-exports.teste = function (req, res, next) {
-	// body...
-
-	var name = req.params.first_name;
-
-	User.find({first_name: name}, function (err, docs) {
-        res.json(docs);
-    });
-}
-
 exports.saveUser = function (req, res, next) {
 	new User({
 		first_name: req.body.first_name,

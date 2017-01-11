@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activies.CreateLivroActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/nome"
+        android:id="@+id/tvCreateName"
+        android:layout_marginTop="20dp"
+        style="@style/tvNome"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/introduce_name"
+        android:ems="10"
+        android:id="@+id/etCreateName"
+        android:textAlignment="center"
+        style="@style/etNome"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/ano"
+        android:id="@+id/tvCreateAno"
+        android:layout_marginTop="20dp"
+        style="@style/tvAno"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="@string/introduce_ano"
+        android:ems="10"
+        android:id="@+id/etCreateAno"
+        android:textAlignment="center"
+        style="@style/etAno"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/ISBN"
+        android:id="@+id/tvCreateISBN"
+        android:layout_marginTop="20dp"
+        style="@style/tvISBN"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="@string/introduce_ISBN"
+        android:ems="10"
+        android:id="@+id/etCreateISBN"
+        android:textAlignment="center"
+        style="@style/etISBN"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/autor"
+        android:id="@+id/tvCreateAutor"
+        android:layout_marginTop="20dp"
+        style="@style/tvAutor"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/introduce_autor"
+        android:ems="10"
+        android:id="@+id/etCreateAutor"
+        android:textAlignment="center"
+        style="@style/etAutor"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/categoria"
+        android:id="@+id/tvCreateCategoria"
+        android:layout_marginTop="20dp"
+        style="@style/tvCategoria"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/introduce_categoria"
+        android:ems="10"
+        android:id="@+id/etCreateCategoria"
+        android:textAlignment="center"
+        style="@style/etCategoria"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/create_livro"
+        android:id="@+id/button"
+        style="@style/button"
+        android:onClick="createAccount"
+        android:layout_marginBottom="15dp" />
+
+</LinearLayout>
