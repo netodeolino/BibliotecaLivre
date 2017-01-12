@@ -93,6 +93,11 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
             startActivity(intent);
             return true;
         }
+        if (id == R.id.action_description_livro) {
+            Intent intent = new Intent(this, LivroDescriptionActivity.class);
+            startActivity(intent);
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }

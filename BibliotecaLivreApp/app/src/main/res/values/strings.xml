@@ -5,6 +5,7 @@
     <string name="action_settings">Settings</string>
     <string name="action_create_livro">Cadastrar Livro</string>
     <string name="action_update_livro">Atualizar Livro</string>
+    <string name="action_description_livro">Descrição do Livro</string>
 
     <!-- Livro -->
     <string name="nome">Nome</string>
@@ -21,6 +22,7 @@
 
     <string name="create_livro">Cadastrar Livro</string>
     <string name="update_livro">Atualizar Livro</string>
+    <string name="description_livro">Descrição do Livro</string>
 
     <!-- Spinners -->
     <string-array name="states_array">

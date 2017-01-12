@@ -39,6 +39,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activies.MainActivity" />
         </activity>
+
+        <activity
+            android:name=".activies.LivroDescriptionActivity"
+            android:label="@string/description_livro"
+            android:parentActivityName=".activies.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activies.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
