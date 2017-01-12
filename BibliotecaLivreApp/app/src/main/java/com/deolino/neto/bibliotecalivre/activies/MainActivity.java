@@ -88,14 +88,19 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
             startActivity(intent);
             return true;
         }
+        if (id == R.id.action_update_livro) {
+            Intent intent = new Intent(this, UpdateLivroActivity.class);
+            startActivity(intent);
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }
 
     public void getTeste(View view){
-        //request.get(ServerRequest.FIND_LIVRO_BY_NAME, "limoeiro");
+        //request.get(ServerRequest.FIND_LIVRO_BY_NAME, "celular"); // para teste
         //request.get(ServerRequest.ALL_LIVROS, null); // para teste
-        request.get(ServerRequest.REMOVE_LIVRO_BY_NAME, "limoeiro");
+        //request.get(ServerRequest.REMOVE_LIVRO_BY_NAME, "limoeiro"); // para teste
     }
 
     @Override

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activies.UpdateLivroActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageLivro"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/nome"
+        android:id="@+id/tvUpdateName"
+        android:layout_marginTop="10dp"
+        style="@style/tvNome"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/etUpdateName"
+        android:textAlignment="center"
+        style="@style/etNome"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/ano"
+        android:id="@+id/tvUpdateAno"
+        android:layout_marginTop="10dp"
+        style="@style/tvAno"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/etUpdateAno"
+        android:textAlignment="center"
+        style="@style/etAno"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/ISBN"
+        android:id="@+id/tvUpdateISBN"
+        android:layout_marginTop="10dp"
+        style="@style/tvISBN"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/etUpdateISBN"
+        android:textAlignment="center"
+        style="@style/etISBN"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/autor"
+        android:id="@+id/tvUpdateAutor"
+        android:layout_marginTop="10dp"
+        style="@style/tvAutor"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/etUpdateAutor"
+        android:textAlignment="center"
+        style="@style/etAutor"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/categoria"
+        android:id="@+id/tvUpdateCategoria"
+        android:layout_marginTop="10dp"
+        style="@style/tvCategoria"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/etUpdateCategoria"
+        android:textAlignment="center"
+        style="@style/etCategoria"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/update_livro"
+        android:id="@+id/button"
+        style="@style/button"
+        android:onClick="updateLivro"
+        android:layout_marginBottom="0dp" />
+
+</LinearLayout>

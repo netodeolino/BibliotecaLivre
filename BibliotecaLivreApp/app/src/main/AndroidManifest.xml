@@ -24,7 +24,16 @@
 
         <activity
             android:name=".activies.CreateLivroActivity"
-            android:label="Cadastrar Livro"
+            android:label="@string/create_livro"
+            android:parentActivityName=".activies.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activies.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".activies.UpdateLivroActivity"
+            android:label="@string/update_livro"
             android:parentActivityName=".activies.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
