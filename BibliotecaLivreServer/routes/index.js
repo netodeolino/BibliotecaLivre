@@ -12,9 +12,14 @@ router.get('/', function(req, res, next) {
 router.get('/users', UserController.allUsers);
 router.post('/saveuser', UserController.saveUser);
 
-router.get('/livros', LivroController.allLivros);
+
+/* Livro POST */
 router.post('/savelivro', LivroController.saveLivro);
+
+/* Livro GET */
+router.get('/findalllivros', LivroController.allLivros);
 router.get('/findlivrobyname/:nome', LivroController.findLivroByName);
-router.get('/removelivrobyname/:nome', LivroController.removeLivroByName);
+router.get('/removelivrobyname/:nome', LivroController.removeLivroByName); //Test
+router.get('/updatelivrobyname/:nome', LivroController.updateLivroByName); //Test
 
 module.exports = router;

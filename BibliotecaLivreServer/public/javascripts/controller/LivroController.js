@@ -39,20 +39,15 @@ exports.findLivroByName = function (req, res, next) {
     });
 }
 
-// Não testado
 exports.removeLivroByName = function (req, res, next) {
 	// body...
 	var nome = req.params.nome;
 
-	Livro.find({nome: nome}, function (err, livro) {
-		livro.remove( function (err, livro) {
-			if (err) {
-				console.log(err);
-				res.json({result: false, data: null});
-			}
-			//res.redirect( '/' );
-			res.json({result: true, data: livro});
-		});
+	Livro.remove({nome: nome}, function (err, livro) {
+		if (err) {
+			res.json({result: false, data: null});
+		}
+		res.json({result: true, data: livro});
 	});
 };
 
@@ -63,10 +58,10 @@ exports.updateLivroByName = function (req, res, next) {
 
 	Livro.find({nome: nome}, function (err, livro) {
 		livro.nome = req.body.nome;
-		ano: req.body.ano;
-    	ISBN: req.body.ISBN;
-    	autor: req.body.autor;
-    	categoria: req.body.categoria;
+		livro.ano = req.body.ano;
+    	livro.ISBN = req.body.ISBN;
+    	livro.autor = req.body.autor;
+    	livro.categoria = req.body.categoria;
     	livro.save(function (err, livro, count) {
     		if (err) {
     			res.json({result: false, data: null});

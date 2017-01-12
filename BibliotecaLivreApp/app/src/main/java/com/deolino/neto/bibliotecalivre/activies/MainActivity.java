@@ -93,8 +93,9 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
     }
 
     public void getTeste(View view){
-        request.get(ServerRequest.FIND_LIVRO_BY_NAME, "limoeiro");
-        //request.get(ServerRequest.ALL_LIVROS, null);
+        //request.get(ServerRequest.FIND_LIVRO_BY_NAME, "limoeiro");
+        //request.get(ServerRequest.ALL_LIVROS, null); // para teste
+        request.get(ServerRequest.REMOVE_LIVRO_BY_NAME, "limoeiro");
     }
 
     @Override

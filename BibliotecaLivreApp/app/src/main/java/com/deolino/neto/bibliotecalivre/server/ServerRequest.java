@@ -15,16 +15,14 @@ import com.google.gson.Gson;
 public class ServerRequest {
 
     private static final String SERVER = "http://192.168.0.112:3000/";
+
     public static final String LOGIN = "login";
-    public static final String GET_ROLES = "roles";
-    public static final String GET_TRAINEE_TEAMS = "team/trainee/";
-    public static final String CREATE_ACCOUNT = "trainee";
-    public static final String PRESENCE_TRAINEE = "trainee/presence/device";
 
     public static final String FIND_LIVRO_BY_NAME = "findlivrobyname/";
-    public static final String ALL_LIVROS = "livros/";
+    public static final String ALL_LIVROS = "findalllivros/";
     public static final String SAVE_LIVRO = "savelivro";
     public static final String REMOVE_LIVRO_BY_NAME = "removelivrobyname/";
+    public static final String UPDATE_LIVRO_BY_NAME = "updatelivrobyname/";
 
 
     private OptimusHTTP client;
