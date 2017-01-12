@@ -6,4 +6,56 @@
     android:layout_height="match_parent"
     tools:context=".activies.LivroDescriptionActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageLivro"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/nome"
+        android:id="@+id/tvDescriptionName"
+        android:layout_marginTop="10dp"
+        style="@style/tvNome"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/ano"
+        android:id="@+id/tvDescriptionAno"
+        android:layout_marginTop="10dp"
+        style="@style/tvAno"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/ISBN"
+        android:id="@+id/tvDescriptionISBN"
+        android:layout_marginTop="10dp"
+        style="@style/tvISBN"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/autor"
+        android:id="@+id/tvDescriptionAutor"
+        android:layout_marginTop="10dp"
+        style="@style/tvAutor"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/categoria"
+        android:id="@+id/tvDescriptionCategoria"
+        android:layout_marginTop="10dp"
+        style="@style/tvCategoria"/>
+
 </LinearLayout>

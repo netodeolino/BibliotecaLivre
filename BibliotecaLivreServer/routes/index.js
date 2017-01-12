@@ -19,7 +19,7 @@ router.post('/savelivro', LivroController.saveLivro);
 /* Livro GET */
 router.get('/findalllivros', LivroController.allLivros);
 router.get('/findlivrobyname/:nome', LivroController.findLivroByName);
-router.get('/removelivrobyname/:nome', LivroController.removeLivroByName); //Test
+router.get('/removelivrobyname/:nome', LivroController.removeLivroByName);
 router.get('/updatelivrobyname/:nome', LivroController.updateLivroByName); //Test
 
 module.exports = router;

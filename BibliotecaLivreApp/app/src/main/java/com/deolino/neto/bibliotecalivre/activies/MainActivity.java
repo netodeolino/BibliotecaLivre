@@ -106,6 +106,7 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
         //request.get(ServerRequest.FIND_LIVRO_BY_NAME, "celular"); // para teste
         //request.get(ServerRequest.ALL_LIVROS, null); // para teste
         //request.get(ServerRequest.REMOVE_LIVRO_BY_NAME, "limoeiro"); // para teste
+        
     }
 
     @Override
