@@ -51,12 +51,26 @@ exports.removeLivroByName = function (req, res, next) {
 	});
 };
 
+exports.updateLivroByName = function (req, res, next) {
+	// body...
+	var isbn = req.body.ISBN;
+
+	Livro.update({ISBN: isbn}, {$set: {nome: req.body.nome, ano: req.body.ano, 
+		autor: req.body.autor, categoria: req.body.categoria}}, function (err, livro, count) {
+		if (err) {
+			res.json({result: false, data: null});
+		}
+		res.json({result: true, data: livro});
+	});
+}
+
+/*
 // Não testado
 exports.updateLivroByName = function (req, res, next) {
 	// body...
-	var nome = req.params.nome;
+	var isbn = req.body.ISBN;
 
-	Livro.find({nome: nome}, function (err, livro) {
+	Livro.find({ISBN: isbn}, function (err, livro) {
 		livro.nome = req.body.nome;
 		livro.ano = req.body.ano;
     	livro.ISBN = req.body.ISBN;
@@ -70,6 +84,7 @@ exports.updateLivroByName = function (req, res, next) {
     	});
 	});
 }
+*/
 
 
 /*

@@ -7,9 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.deolino.neto.bibliotecalivre.R;
 import com.deolino.neto.bibliotecalivre.constants.Constants;
@@ -101,20 +101,14 @@ public class LivroDescriptionActivity extends AppCompatActivity implements Serve
 
                         this.livro = liv;
 
-                        // TESTE DE SET DESCRIÇÃO EM TELA
-                        // DEPOIS CRIAR UM METODO PARA ESSA AÇAO DE SET EM TELA
-                        // AJEITAR A IMAGEM, ESTÁ UMA FIXA
-                        this.imageViewLivro.setImageResource(R.drawable.update_livro);
-                        this.textViewNome.setText(livro.getNome());
-                        this.textViewAno.setText(Integer.toString(livro.getAno()));
-                        this.textViewISBN.setText(livro.getISBN());
-                        this.textViewAutor.setText(livro.getAutor());
-                        this.textViewCategoria.setText(livro.getCategoria());
+                        updateActivityDescription();
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
                     Log.e(Constants.LOG_TAG, "LOL--> " + e.toString());
                 }
+            } else {
+                Toast.makeText(this, "Não foi possível realizar a operação!", Toast.LENGTH_LONG).show();
             }
         } else {
             Log.d(Constants.LOG_TEST, "NAO FOI UM FIND LIVRO PELO NOME :)");
@@ -125,4 +119,15 @@ public class LivroDescriptionActivity extends AppCompatActivity implements Serve
     public void onFailure(Response response, String requestUrl) {
 
     }
+
+    private void updateActivityDescription() {
+        // AJEITAR A IMAGEM, ESTÁ UMA FIXA
+        this.imageViewLivro.setImageResource(R.drawable.capa_livro);
+        this.textViewNome.setText(livro.getNome());
+        this.textViewAno.setText(Integer.toString(livro.getAno()));
+        this.textViewISBN.setText(livro.getISBN());
+        this.textViewAutor.setText(livro.getAutor());
+        this.textViewCategoria.setText(livro.getCategoria());
+    }
+
 }

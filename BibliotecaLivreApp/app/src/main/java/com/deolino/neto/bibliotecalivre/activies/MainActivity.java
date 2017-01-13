@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
         return super.onOptionsItemSelected(item);
     }
 
-    public void getTeste(View view){
+    public void getTeste(View view) {
         //request.get(ServerRequest.FIND_LIVRO_BY_NAME, "celular"); // para teste
         //request.get(ServerRequest.ALL_LIVROS, null); // para teste
         //request.get(ServerRequest.REMOVE_LIVRO_BY_NAME, "limoeiro"); // para teste
@@ -129,6 +129,8 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
                 Log.i(Constants.LOG_TEST, livrao.getAutor());
                 Log.i(Constants.LOG_TEST, String.valueOf(livrao.getAno()));
                 Log.i(Constants.LOG_TEST, livrao.getISBN());*/
+            } else {
+                Toast.makeText(this, "Não foi possível realizar a operação!", Toast.LENGTH_LONG).show();
             }
         } else {
             Log.d(Constants.LOG_TEST, "NAO FOI UM FIND LIVRO PELO NOME :)");

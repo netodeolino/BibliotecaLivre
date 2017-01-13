@@ -65,7 +65,8 @@
         android:ems="10"
         android:id="@+id/etUpdateISBN"
         android:textAlignment="center"
-        style="@style/etISBN"/>
+        style="@style/etISBN"
+        android:editable="false" />
 
     <TextView
         android:layout_width="match_parent"
