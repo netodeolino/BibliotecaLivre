@@ -28,7 +28,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements ServerResponseListener, AdapterView.OnItemSelectedListener {
 
-    private User user;
+    //private User user;
     private Livro livrao;
 
     private ServerRequest request;
@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
         setSupportActionBar(toolbar);
 
         this.request = new ServerRequest(this, this);
-        this.user = new User();
-        this.user.setId("1"); //NÃO TENHO LOGIN e isso não está sendo utilizado também no momento
+        //this.user = new User();
+        //this.user.setId("1"); //NÃO TENHO LOGIN e isso não está sendo utilizado também no momento
 
         this.spinner1 = (Spinner) findViewById(R.id.spinner1);
         this.spinner2 = (Spinner) findViewById(R.id.spinner2);
@@ -88,11 +88,6 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
             startActivity(intent);
             return true;
         }
-        if (id == R.id.action_update_livro) {
-            Intent intent = new Intent(this, UpdateLivroActivity.class);
-            startActivity(intent);
-            return true;
-        }
         if (id == R.id.action_description_livro) {
             Intent intent = new Intent(this, LivroDescriptionActivity.class);
             startActivity(intent);
@@ -106,7 +101,6 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
         //request.get(ServerRequest.FIND_LIVRO_BY_NAME, "celular"); // para teste
         //request.get(ServerRequest.ALL_LIVROS, null); // para teste
         //request.get(ServerRequest.REMOVE_LIVRO_BY_NAME, "limoeiro"); // para teste
-
     }
 
     @Override
@@ -162,7 +156,7 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
             adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             this.spinner2.setAdapter(adapter2);
         }
-
+        // FAZER PARA O RESTO DAS CIDADES
     }
 
     @Override
