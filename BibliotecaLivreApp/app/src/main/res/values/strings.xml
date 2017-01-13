@@ -56,10 +56,10 @@
     </string-array>
 
     <string-array name="cities_ce_array">
-        <item>Limoeiro do Norte</item>
         <item>Tabuleiro do Norte</item>
         <item>Russas</item>
         <item>Alto Santo</item>
+        <item>Limoeiro do Norte</item>
         <item>Quixada</item>
         <item>Morada-Nova</item>
         <item>Fortaleza</item>

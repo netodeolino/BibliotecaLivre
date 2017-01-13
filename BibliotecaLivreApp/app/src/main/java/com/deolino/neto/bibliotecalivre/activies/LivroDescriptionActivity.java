@@ -117,7 +117,7 @@ public class LivroDescriptionActivity extends AppCompatActivity implements Serve
 
     @Override
     public void onFailure(Response response, String requestUrl) {
-
+        Toast.makeText(this, "Não foi possível realizar a operação com sucesso!", Toast.LENGTH_LONG).show();
     }
 
     private void updateActivityDescription() {

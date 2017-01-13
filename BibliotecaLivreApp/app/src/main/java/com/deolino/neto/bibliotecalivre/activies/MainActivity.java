@@ -151,6 +151,23 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
             ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.cities_ce_array, android.R.layout.simple_spinner_item);
             adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             this.spinner2.setAdapter(adapter2);
+            this.spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    int iCe = position;
+                    if (iCe == 3) {
+                        Toast.makeText(parent.getContext(), "Selected: Limoeiro do norte", Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(parent.getContext(), "Selected: Outra cidade", Toast.LENGTH_LONG).show();
+                        // Mudar para ser com String mesmo
+                    }
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
         }
 
         if (item.equals("RN")) {

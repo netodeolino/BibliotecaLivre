@@ -104,7 +104,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/update_livro"
+        android:text="@string/create_livro"
         android:id="@+id/button"
         style="@style/button"
         android:onClick="createLivro"
