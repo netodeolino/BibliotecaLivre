@@ -3,6 +3,7 @@ var router = express.Router();
 
 var UserController = require('../public/javascripts/controller/UserController');
 var LivroController = require('../public/javascripts/controller/LivroController');
+var CidadeController = require('../public/javascripts/controller/CidadeController');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -20,8 +21,20 @@ router.post('/updatelivrobyisbn', LivroController.updateLivroByISBN);
 /* Livro GET */
 router.get('/findalllivros', LivroController.allLivros);
 router.get('/findlivrobyname/:nome', LivroController.findLivroByName);
-router.get('/findlivrobyisbn/:ISBN', LivroController.findLivroByISBN);
+router.get('/findlivrobyisbn/:ISBN', LivroController.findLivroByISBN); // Test
 router.get('/removelivrobyname/:nome', LivroController.removeLivroByName);
 
+
+/* Cidade POST */
+router.post('/savecidade', CidadeController.saveCidade); // Test
+router.post('/updatecidadebycodigo', CidadeController.updateCidadeByCodigo); // Test
+
+/* Cidade GET */
+router.get('/findallcidades', CidadeController.allCidades); // Test
+router.get('/findallcidadesbyestado/:estado', CidadeController.allCidadesByEstado); // Test
+router.get('/findcidadebycodigo/:codigo', CidadeController.findCidadeByCodigo); // Test
+router.get('/findcidadebyname/:nome', CidadeController.findCidadeByName); // Test
+router.get('/removecidadebyname/:nome', CidadeController.removeCidadeByName); // Test
+router.get('/removecidadebycodigo/:codigo', CidadeController.updateCidadeByCodigo); // Test
 
 module.exports = router;
