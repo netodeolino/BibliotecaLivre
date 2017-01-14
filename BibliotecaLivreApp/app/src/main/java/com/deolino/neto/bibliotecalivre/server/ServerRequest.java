@@ -20,6 +20,7 @@ public class ServerRequest {
 
     /* LIVRO */
     public static final String FIND_LIVRO_BY_NAME = "findlivrobyname/";
+    public static final String FIND_LIVRO_BY_ISBN = "findlivrobyisbn/";
     public static final String ALL_LIVROS = "findalllivros/";
     public static final String SAVE_LIVRO = "savelivro";
     public static final String REMOVE_LIVRO_BY_NAME = "removelivrobyname/";

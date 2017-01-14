@@ -20,6 +20,7 @@ router.post('/updatelivrobyisbn', LivroController.updateLivroByISBN);
 /* Livro GET */
 router.get('/findalllivros', LivroController.allLivros);
 router.get('/findlivrobyname/:nome', LivroController.findLivroByName);
+router.get('/findlivrobyisbn/:ISBN', LivroController.findLivroByISBN);
 router.get('/removelivrobyname/:nome', LivroController.removeLivroByName);
 
 

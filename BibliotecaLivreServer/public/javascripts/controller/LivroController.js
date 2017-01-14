@@ -27,7 +27,18 @@ exports.saveLivro = function (req, res, next) {
 	});
 }
 
-// FIND LIVRO BY ISBN HERE
+/* Test */
+exports.findLivroByISBN = function (req, res, next) {
+	// body...
+	var isbn = req.params.ISBN;
+
+	Livro.find({ISBN: isbn}, function (err, livro) {
+		if (err) {
+			res.json({result: false, data: null});
+		}
+        res.json({result: true, data: livro});
+    });
+}
 
 exports.findLivroByName = function (req, res, next) {
 	// body...

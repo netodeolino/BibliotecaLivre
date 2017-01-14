@@ -13,6 +13,19 @@ exports.allCidades = function (req, res, next) {
 }
 
 /* Test */
+exports.allCidadesByEstado = function (req, res, next) {
+	// body...
+	var est = req.params.estado;
+
+	Cidade.find({estado: est}, function (err, docs) {
+		if (err) {
+			res.json({result: false, data: null});
+		}
+        res.json({result: true, data: docs});
+    });
+}
+
+/* Test */
 exports.saveCidade = function (req, res, next) {
 	new Cidade({
 		nome: req.body.nome,
