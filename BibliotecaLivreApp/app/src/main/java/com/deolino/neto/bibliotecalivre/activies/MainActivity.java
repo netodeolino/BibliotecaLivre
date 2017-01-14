@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.deolino.neto.bibliotecalivre.R;
 import com.deolino.neto.bibliotecalivre.constants.Constants;
 import com.deolino.neto.bibliotecalivre.interfaces.ServerResponseListener;
+import com.deolino.neto.bibliotecalivre.model.Cidade;
 import com.deolino.neto.bibliotecalivre.model.Livro;
 import com.deolino.neto.bibliotecalivre.model.User;
 import com.deolino.neto.bibliotecalivre.server.Response;
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
 
     //private User user;
     private Livro livrao;
+
+    private ArrayList<Cidade> cidades = new ArrayList<Cidade>();
 
     private ServerRequest request;
 
@@ -125,16 +128,33 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
                     e.printStackTrace();
                     Log.e(Constants.LOG_TAG, "LOL--> " + e.toString());
                 }
-                // SÓ PARA TESTE MESMO
-                /*Log.i(Constants.LOG_TEST, livrao.getNome());
-                Log.i(Constants.LOG_TEST, livrao.getAutor());
-                Log.i(Constants.LOG_TEST, String.valueOf(livrao.getAno()));
-                Log.i(Constants.LOG_TEST, livrao.getISBN());*/
             } else {
                 Toast.makeText(this, "Não foi possível realizar a operação!", Toast.LENGTH_LONG).show();
             }
+        } else if (requestUrl.equals(ServerRequest.ALL_CIDADES_BY_ESTADO)) {
+            if (response.getResult()) {
+                ArrayList<LinkedTreeMap<String, Object>> data = (ArrayList<LinkedTreeMap<String, Object>>) response.getData();
+                try {
+                    for (LinkedTreeMap<String, Object> mp : data) {
+                        Cidade c = new Cidade();
+
+                        c.setNome(mp.get("nome").toString());
+                        c.setEstado(mp.get("estado").toString());
+                        c.setCodigo((int) Double.parseDouble(mp.get("codigo").toString()));
+
+                        this.cidades.add(c);
+                    }
+                    // test
+                    for (Cidade b : cidades) {
+                        Log.d(Constants.LOG_TEST, b.getNome());
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Log.e(Constants.LOG_TAG, "LOL--> " + e.toString());
+                }
+            }
         } else {
-            Log.d(Constants.LOG_TEST, "NAO FOI UM FIND LIVRO PELO NOME :)");
+            Log.d(Constants.LOG_TEST, "REQUEST NÃO TRATADO AINDA :)");
         }
     }
 
@@ -149,7 +169,8 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
         Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
 
         if (item.equals("CE")) {
-            ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.cities_ce_array, android.R.layout.simple_spinner_item);
+            request.get(ServerRequest.ALL_CIDADES_BY_ESTADO, item);
+            /*ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.cities_ce_array, android.R.layout.simple_spinner_item);
             adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             this.spinner2.setAdapter(adapter2);
             this.spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -163,7 +184,7 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
                 public void onNothingSelected(AdapterView<?> parent) {
 
                 }
-            });
+            });*/
         }
 
         if (item.equals("RN")) {

@@ -84,7 +84,7 @@ public class CreateLivroActivity extends AppCompatActivity implements ServerResp
                 Toast.makeText(this, "Não foi possível cadastrar o livro!", Toast.LENGTH_LONG).show();
             }
         } else {
-            Log.d(Constants.LOG_TEST, "NAO FOI UM SAVE LIVRO :)");
+            Log.d(Constants.LOG_TEST, "REQUEST NÃO TRATADO AINDA :)");
         }
     }
 

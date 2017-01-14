@@ -111,7 +111,7 @@ public class LivroDescriptionActivity extends AppCompatActivity implements Serve
                 Toast.makeText(this, "Não foi possível realizar a operação!", Toast.LENGTH_LONG).show();
             }
         } else {
-            Log.d(Constants.LOG_TEST, "NAO FOI UM FIND LIVRO PELO NOME :)");
+            Log.d(Constants.LOG_TEST, "REQUEST NÃO TRATADO AINDA :)");
         }
     }
 
