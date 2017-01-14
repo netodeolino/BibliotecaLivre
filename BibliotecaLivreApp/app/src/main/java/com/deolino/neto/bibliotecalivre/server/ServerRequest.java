@@ -29,6 +29,7 @@ public class ServerRequest {
     /* CIDADE */
     public static final String FIND_CIDADE_BY_CODIGO = "findcidadebycodigo/";
     public static final String ALL_CIDADES_BY_ESTADO = "findallcidadesbyestado/";
+    public static final String SAVE_CIDADE = "savecidade";
 
     private OptimusHTTP client;
     private ServerResponseListener listener;

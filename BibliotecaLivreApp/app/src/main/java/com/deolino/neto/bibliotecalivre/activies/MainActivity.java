@@ -2,6 +2,7 @@ package com.deolino.neto.bibliotecalivre.activies;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.CheckableImageButton;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
     private Livro livrao;
 
     private ArrayList<Cidade> cidades = new ArrayList<Cidade>();
+    private ArrayList<String> cidadesString = new ArrayList<String>();
 
     private ServerRequest request;
 
@@ -143,10 +145,7 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
                         c.setCodigo((int) Double.parseDouble(mp.get("codigo").toString()));
 
                         this.cidades.add(c);
-                    }
-                    // test
-                    for (Cidade b : cidades) {
-                        Log.d(Constants.LOG_TEST, b.getNome());
+                        this.cidadesString.add(c.getNome());
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -170,7 +169,10 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
 
         if (item.equals("CE")) {
             request.get(ServerRequest.ALL_CIDADES_BY_ESTADO, item);
-            /*ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.cities_ce_array, android.R.layout.simple_spinner_item);
+
+            // NAO FICOU 100% BOM, NAO ENTRA NO SETONITEMSELECT
+            ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, this.cidadesString);
+            //ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.cities_ce_array, android.R.layout.simple_spinner_item);
             adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             this.spinner2.setAdapter(adapter2);
             this.spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -184,7 +186,7 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
                 public void onNothingSelected(AdapterView<?> parent) {
 
                 }
-            });*/
+            });
         }
 
         if (item.equals("RN")) {
