@@ -89,8 +89,9 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
             return true;
         }
         if (id == R.id.action_description_livro) {
-            Intent intent = new Intent(this, LivroDescriptionActivity.class);
-            startActivity(intent);
+            /* Test */
+            // Intent intent = new Intent(this, LivroDescriptionActivity.class);
+            // startActivity(intent);
             return true;
         }
 
@@ -154,13 +155,8 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
             this.spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    int iCe = position;
-                    if (iCe == 3) {
-                        Toast.makeText(parent.getContext(), "Selected: Limoeiro do norte", Toast.LENGTH_LONG).show();
-                    } else {
-                        Toast.makeText(parent.getContext(), "Selected: Outra cidade", Toast.LENGTH_LONG).show();
-                        // Mudar para ser com String mesmo
-                    }
+                    String itemCE = parent.getItemAtPosition(position).toString();
+                    Toast.makeText(parent.getContext(), "Selected: " + itemCE, Toast.LENGTH_LONG).show();
                 }
 
                 @Override

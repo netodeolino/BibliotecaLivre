@@ -11,10 +11,10 @@ var UserSchema = new Schema({
 	versionKey: false // You should be aware of the outcome after set to false
 });
 
-var LocalizacaoSchema = new Schema({
+var CidadeSchema = new Schema({
     nome: String,
     estado: String,
-    pais: String
+    codigo: Number
 }, {
 	versionKey: false // You should be aware of the outcome after set to false
 });

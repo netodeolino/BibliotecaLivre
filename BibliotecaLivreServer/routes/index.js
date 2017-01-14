@@ -15,7 +15,7 @@ router.post('/saveuser', UserController.saveUser);
 
 /* Livro POST */
 router.post('/savelivro', LivroController.saveLivro);
-router.post('/updatelivrobyname', LivroController.updateLivroByName);
+router.post('/updatelivrobyisbn', LivroController.updateLivroByISBN);
 
 /* Livro GET */
 router.get('/findalllivros', LivroController.allLivros);
