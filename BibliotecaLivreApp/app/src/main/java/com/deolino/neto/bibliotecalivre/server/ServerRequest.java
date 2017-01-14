@@ -18,12 +18,15 @@ public class ServerRequest {
 
     public static final String LOGIN = "login";
 
+    /* LIVRO */
     public static final String FIND_LIVRO_BY_NAME = "findlivrobyname/";
     public static final String ALL_LIVROS = "findalllivros/";
     public static final String SAVE_LIVRO = "savelivro";
     public static final String REMOVE_LIVRO_BY_NAME = "removelivrobyname/";
     public static final String UPDATE_LIVRO = "updatelivrobyisbn/";
 
+    /* CIDADE */
+    public static final String FIND_CIDADE_BY_CODIGO = "findcidadebycodigo/";
 
     private OptimusHTTP client;
     private ServerResponseListener listener;

@@ -31,7 +31,7 @@ var LivroSchema = new Schema({
 
 // Mongoose Model definition
 mongoose.model('User', UserSchema);
-mongoose.model('Localizacao', LocalizacaoSchema);
+mongoose.model('Cidade', CidadeSchema);
 mongoose.model('Livro', LivroSchema);
 
 // Base connection

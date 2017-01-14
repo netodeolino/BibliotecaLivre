@@ -10,24 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="125b1f68-3d18-4265-b741-5d10fbbc44c6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/model/Cidade.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../BibliotecaLivreServer/public/javascripts/controller/LocalizacaoController.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/activies/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/activies/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/server/ServerRequest.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/server/ServerRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BibliotecaLivreServer/public/javascripts/banco/ConexaoBanco.js" afterPath="$PROJECT_DIR$/../BibliotecaLivreServer/public/javascripts/banco/ConexaoBanco.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BibliotecaLivreServer/public/javascripts/controller/LivroController.js" afterPath="$PROJECT_DIR$/../BibliotecaLivreServer/public/javascripts/controller/LivroController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BibliotecaLivreServer/public/javascripts/controller/UserController.js" afterPath="$PROJECT_DIR$/../BibliotecaLivreServer/public/javascripts/controller/UserController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BibliotecaLivreServer/routes/index.js" afterPath="$PROJECT_DIR$/../BibliotecaLivreServer/routes/index.js" />
     </list>
     <ignored path="BibliotecaLivreApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,8 +72,8 @@
       <file leaf-file-name="ServerRequest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/server/ServerRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="48" selection-start-line="0" selection-start-column="48" selection-end-line="0" selection-end-column="48" />
+            <state relative-caret-position="374">
+              <caret line="28" column="74" selection-start-line="28" selection-start-column="74" selection-end-line="28" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -1857,8 +1840,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/activies/LivroDescriptionActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/activies/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/server/ServerRequest.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/model/Cidade.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/server/ServerRequest.java" />
       </list>
     </option>
   </component>
@@ -2822,8 +2805,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/server/ServerRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="48" selection-start-line="0" selection-start-column="48" selection-end-line="0" selection-end-column="48" />
+        <state relative-caret-position="374">
+          <caret line="28" column="74" selection-start-line="28" selection-start-column="74" selection-end-line="28" selection-end-column="74" />
           <folding />
         </state>
       </provider>
