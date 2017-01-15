@@ -55,22 +55,4 @@
         <item>TO</item>
     </string-array>
 
-    <string-array name="cities_ce_array">
-        <item>Tabuleiro do Norte</item>
-        <item>Russas</item>
-        <item>Alto Santo</item>
-        <item>Limoeiro do Norte</item>
-        <item>Quixada</item>
-        <item>Morada-Nova</item>
-        <item>Fortaleza</item>
-        <item>Horizonte</item>
-    </string-array>
-
-    <string-array name="cities_rn_array">
-        <item>Barauna</item>
-        <item>Mossoro</item>
-        <item>Natal</item>
-        <item>Apodi</item>
-    </string-array>
-
 </resources>

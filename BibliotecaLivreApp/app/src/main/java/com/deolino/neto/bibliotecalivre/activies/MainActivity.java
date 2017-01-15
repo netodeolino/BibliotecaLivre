@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
     private ServerRequest request;
 
     private Spinner spinner1;
-    private Spinner spinner2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +52,6 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
         //this.user.setId("1"); //NÃO TENHO LOGIN e isso não está sendo utilizado também no momento
 
         this.spinner1 = (Spinner) findViewById(R.id.spinner1);
-        this.spinner2 = (Spinner) findViewById(R.id.spinner2);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.states_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -171,7 +169,7 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
             request.get(ServerRequest.ALL_CIDADES_BY_ESTADO, item);
 
             // NAO FICOU 100% BOM, NAO ENTRA NO SETONITEMSELECT
-            ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, this.cidadesString);
+            ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, this.cidadesString);
             //ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.cities_ce_array, android.R.layout.simple_spinner_item);
             adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             this.spinner2.setAdapter(adapter2);
@@ -190,11 +188,13 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
         }
 
         if (item.equals("RN")) {
+            /*
             ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.cities_rn_array, android.R.layout.simple_spinner_item);
             adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             this.spinner2.setAdapter(adapter2);
+            */
         }
-        // FAZER PARA O RESTO DAS CIDADES
+        // FAZER PARA O RESTO DOS ESTADOS
     }
 
     @Override
