@@ -1,5 +1,6 @@
 package com.deolino.neto.bibliotecalivre.activies;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CheckableImageButton;
@@ -36,33 +37,48 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
     private Livro livrao;
 
     private ArrayList<Cidade> cidades = new ArrayList<Cidade>();
-    private ArrayList<String> cidadesString = new ArrayList<String>();
 
     private ServerRequest request;
 
     private Spinner spinner1;
 
-    ListView cidadesLista;
+    private ListView cidadesLista;
+
+    private Context context;
+
+    private int cidadeCodigo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         this.cidadesLista = (ListView) findViewById(R.id.lvCidades);
+        this.spinner1 = (Spinner) findViewById(R.id.spinner1);
 
         this.request = new ServerRequest(this, this);
+        this.context = this;
         //this.user = new User();
         //this.user.setId("1"); //NÃO TENHO LOGIN e isso não está sendo utilizado também no momento
-
-        this.spinner1 = (Spinner) findViewById(R.id.spinner1);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.states_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner1.setAdapter(adapter);
         spinner1.setOnItemSelectedListener(this);
+
+        this.cidadesLista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.d(Constants.LOG_TEST, "Item " + position + " clicked");
+
+                cidadeCodigo = cidades.get(position).getCodigo();
+                Intent intent = new Intent(context, CidadeDescriptionActivity.class);
+                intent.putExtra("cidadeCodigo", cidadeCodigo);
+                startActivity(intent);
+            }
+        });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -152,7 +168,6 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
                         c.setCodigo((int) Double.parseDouble(mp.get("codigo").toString()));
 
                         this.cidades.add(c);
-                        this.cidadesString.add(c.getNome());
                     }
                     populateListCidade();
                 } catch (Exception e) {
