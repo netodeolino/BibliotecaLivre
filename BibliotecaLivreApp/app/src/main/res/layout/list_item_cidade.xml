@@ -14,7 +14,8 @@
             android:layout_height="124dp"
             android:layout_width="match_parent"
             android:text=""
-            android:layout_weight="0.24" />
+            android:layout_weight="0.24"
+            style="@style/cidadeName"/>
         </LinearLayout>
 
         <LinearLayout

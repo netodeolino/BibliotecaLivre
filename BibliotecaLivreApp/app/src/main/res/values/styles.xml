@@ -76,12 +76,8 @@
     </style>
 
     <!-- Cidade Adapter -->
-    <style name="cidade_dateTime">
-        <item name="android:gravity">center</item>
-        <item name="android:textColor">@color/colorPrimary</item>
-    </style>
 
-    <style name="cidade_startEnd">
+    <style name="cidadeName">
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:textSize">20dp</item>

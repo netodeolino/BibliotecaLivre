@@ -70,7 +70,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="6e6ba51de1b3bea5bde391d1855ace61a57fe99f">
+        sha1="75a8c0a34129b101c297420a5e55d05c0556d879">
         <dex dex="/home/neto/GitHub/Express/BibliotecaLivre/BibliotecaLivreApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_d332782d84e59dab6577810b5f019fb97569645e/classes.dex" />
     </item>
     <item
@@ -97,7 +97,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="f796ec57ef8d1a588cc4592e94756d4916a19215">
+        sha1="3a3ef430f48b0cf9ac07f9d3e39a1c4223184839">
         <dex dex="/home/neto/GitHub/Express/BibliotecaLivre/BibliotecaLivreApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_fcc326c0077adb004faf734d963e0acc1020dc54/classes.dex" />
     </item>
     <item

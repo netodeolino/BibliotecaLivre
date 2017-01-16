@@ -138,6 +138,9 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
                 Toast.makeText(this, "Não foi possível realizar a operação!", Toast.LENGTH_LONG).show();
             }
         } else if (requestUrl.equals(ServerRequest.ALL_CIDADES_BY_ESTADO)) {
+            if (this.cidades.size() > 0) {
+                this.cidades.clear();
+            }
             if (response.getResult()) {
                 ArrayList<LinkedTreeMap<String, Object>> data = (ArrayList<LinkedTreeMap<String, Object>>) response.getData();
                 try {
@@ -151,6 +154,7 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
                         this.cidades.add(c);
                         this.cidadesString.add(c.getNome());
                     }
+                    populateListCidade();
                 } catch (Exception e) {
                     e.printStackTrace();
                     Log.e(Constants.LOG_TAG, "LOL--> " + e.toString());
@@ -173,17 +177,17 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
         if (!item.equals("")) {
             request.get(ServerRequest.ALL_CIDADES_BY_ESTADO, item);
         }
-
-        Log.d(Constants.LOG_TEST, this.cidades.size()+"");
-
-        if (this.cidades.size() > 0) {
-            CidadeAdapter cidadeAdapter = new CidadeAdapter(getApplicationContext(), this.cidades);
-            cidadesLista.setAdapter(cidadeAdapter);
-        }
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    private void populateListCidade() {
+        Log.d(Constants.LOG_TEST, this.cidades.size()+"");
+
+        CidadeAdapter cidadeAdapter = new CidadeAdapter(getApplicationContext(), this.cidades);
+        cidadesLista.setAdapter(cidadeAdapter);
     }
 }
