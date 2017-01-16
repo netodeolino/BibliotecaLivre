@@ -1,82 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="3"
-        android:baselineAligned="false">
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
 
         <LinearLayout
             android:orientation="horizontal"
+            android:layout_width="193dp"
+            android:layout_height="124dp">
+        <TextView
+            android:id="@+id/tvCidadeNome"
+            android:layout_height="124dp"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-
-            <TextView
-                android:id="@+id/tvEventDate"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1.5"
-                android:text=""
-                style="@style/event_dateTime" />
-
-            <TextView
-                android:id="@+id/tvEventTime"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text=""
-                style="@style/event_dateTime" />
-
-            <ImageView
-                android:id="@+id/ivEventType"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:src="@drawable/bike"
-                android:layout_margin="5dp" />
-
+            android:text=""
+            android:layout_weight="0.24" />
         </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_height="124dp">
 
-            <TextView
-                android:id="@+id/tvEventStart"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/start"
-                style="@style/event_startEnd" />
-
-            <TextView
-                android:id="@+id/tvEventMiddle"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:text="@string/dash"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/colorPrimary" />
-
-            <TextView
-                android:id="@+id/tvEventEnd"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/finish"
-                style="@style/event_startEnd" />
-
+        <ImageView
+            android:id="@+id/ivCidadeImage"
+            android:layout_height="124dp"
+            android:layout_width="122dp"
+            android:src="@drawable/cidade_icon" />
         </LinearLayout>
-
-    </LinearLayout>
 
 </LinearLayout>

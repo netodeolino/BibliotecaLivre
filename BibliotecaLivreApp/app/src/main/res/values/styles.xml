@@ -75,6 +75,18 @@
         <item name="android:textColor">@color/colorWhite</item>
     </style>
 
+    <!-- Cidade Adapter -->
+    <style name="cidade_dateTime">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="cidade_startEnd">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 

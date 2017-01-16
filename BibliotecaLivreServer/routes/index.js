@@ -31,7 +31,7 @@ router.post('/updatecidadebycodigo', CidadeController.updateCidadeByCodigo); // 
 
 /* Cidade GET */
 router.get('/findallcidades', CidadeController.allCidades); // Test
-router.get('/findallcidadesbyestado/:estado', CidadeController.allCidadesByEstado); // Test
+router.get('/findallcidadesbyestado/:estado', CidadeController.allCidadesByEstado);
 router.get('/findcidadebycodigo/:codigo', CidadeController.findCidadeByCodigo); // Test
 router.get('/findcidadebyname/:nome', CidadeController.findCidadeByName); // Test
 router.get('/removecidadebyname/:nome', CidadeController.removeCidadeByName); // Test

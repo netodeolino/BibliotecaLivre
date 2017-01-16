@@ -12,7 +12,6 @@ exports.allCidades = function (req, res, next) {
     });
 }
 
-/* Test */
 exports.allCidadesByEstado = function (req, res, next) {
 	// body...
 	var est = req.params.estado;

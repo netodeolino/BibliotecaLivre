@@ -13,10 +13,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.deolino.neto.bibliotecalivre.R;
+import com.deolino.neto.bibliotecalivre.adapters.CidadeAdapter;
 import com.deolino.neto.bibliotecalivre.constants.Constants;
 import com.deolino.neto.bibliotecalivre.interfaces.ServerResponseListener;
 import com.deolino.neto.bibliotecalivre.model.Cidade;
@@ -40,12 +42,16 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
 
     private Spinner spinner1;
 
+    ListView cidadesLista;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        this.cidadesLista = (ListView) findViewById(R.id.lvCidades);
 
         this.request = new ServerRequest(this, this);
         //this.user = new User();
@@ -163,38 +169,17 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String item = parent.getItemAtPosition(position).toString();
-        Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
 
-        if (item.equals("CE")) {
+        if (!item.equals("")) {
             request.get(ServerRequest.ALL_CIDADES_BY_ESTADO, item);
-
-            // NAO FICOU 100% BOM, NAO ENTRA NO SETONITEMSELECT
-            ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, this.cidadesString);
-            //ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.cities_ce_array, android.R.layout.simple_spinner_item);
-            adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            this.spinner2.setAdapter(adapter2);
-            this.spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    String itemCE = parent.getItemAtPosition(position).toString();
-                    Toast.makeText(parent.getContext(), "Selected: " + itemCE, Toast.LENGTH_LONG).show();
-                }
-
-                @Override
-                public void onNothingSelected(AdapterView<?> parent) {
-
-                }
-            });
         }
 
-        if (item.equals("RN")) {
-            /*
-            ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.cities_rn_array, android.R.layout.simple_spinner_item);
-            adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            this.spinner2.setAdapter(adapter2);
-            */
+        Log.d(Constants.LOG_TEST, this.cidades.size()+"");
+
+        if (this.cidades.size() > 0) {
+            CidadeAdapter cidadeAdapter = new CidadeAdapter(getApplicationContext(), this.cidades);
+            cidadesLista.setAdapter(cidadeAdapter);
         }
-        // FAZER PARA O RESTO DOS ESTADOS
     }
 
     @Override
