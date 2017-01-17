@@ -29,10 +29,20 @@ var LivroSchema = new Schema({
 	versionKey: false // You should be aware of the outcome after set to false
 });
 
+var BibliotecaSchema = new Schema({
+	nome: String,
+	endereco: String,
+	cidade: [{type: Schema.Types.ObjectId, ref: 'Cidade'}],
+	livros: [{type: Schema.Types.ObjectId, ref: 'Livro'}]
+}, {
+	versionKey: false // You should be aware of the outcome after set to false
+});
+
 // Mongoose Model definition
 mongoose.model('User', UserSchema);
 mongoose.model('Cidade', CidadeSchema);
 mongoose.model('Livro', LivroSchema);
+mongoose.model('Biblioteca', BibliotecaSchema);
 
 // Base connection
 mongoose.connect('mongodb://localhost/BibliotecaLivre');
