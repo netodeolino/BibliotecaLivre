@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
 
 // Mongoose Schema definition
 var Schema = mongoose.Schema;

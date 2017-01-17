@@ -33,6 +33,7 @@ exports.saveBiblioteca = function (req, res, next) {
     	livros: req.body.livros
 	}).save(function(err, biblioteca, count){
 		if (err) {
+			//return res.send();
 			res.json({result: false, data: null});
 		}
 		res.json({result: true, data: biblioteca});
@@ -44,11 +45,11 @@ exports.findBibliotecaByName = function (req, res, next) {
 	// body...
 	var nome = req.params.nome;
 
-	Biblioteca.find({nome: nome}, function (err, cidade) {
+	Biblioteca.find({nome: nome}, function (err, biblioteca) {
 		if (err) {
 			res.json({result: false, data: null});
 		}
-        res.json({result: true, data: cidade});
+        res.json({result: true, data: biblioteca});
     });
 }
 
@@ -57,11 +58,11 @@ exports.removeBibliotecaByName = function (req, res, next) {
 	// body...
 	var nome = req.params.nome;
 
-	Biblioteca.remove({nome: nome}, function (err, cidade) {
+	Biblioteca.remove({nome: nome}, function (err, biblioteca) {
 		if (err) {
 			res.json({result: false, data: null});
 		}
-		res.json({result: true, data: cidade});
+		res.json({result: true, data: biblioteca});
 	});
 };
 
@@ -71,10 +72,10 @@ exports.updateBibliotecaByName = function (req, res, next) {
 	var cod = req.body.codigo;
 
 	Biblioteca.update({codigo: cod}, {$set: {nome: req.body.nome,
-		estado: req.body.estado}}, function (err, cidade, count) {
+		estado: req.body.estado}}, function (err, biblioteca, count) {
 		if (err) {
 			res.json({result: false, data: null});
 		}
-		res.json({result: true, data: cidade});
+		res.json({result: true, data: biblioteca});
 	});
 }

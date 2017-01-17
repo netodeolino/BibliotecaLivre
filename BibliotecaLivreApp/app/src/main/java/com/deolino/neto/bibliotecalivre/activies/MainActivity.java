@@ -22,6 +22,7 @@ import com.deolino.neto.bibliotecalivre.R;
 import com.deolino.neto.bibliotecalivre.adapters.CidadeAdapter;
 import com.deolino.neto.bibliotecalivre.constants.Constants;
 import com.deolino.neto.bibliotecalivre.interfaces.ServerResponseListener;
+import com.deolino.neto.bibliotecalivre.model.Biblioteca;
 import com.deolino.neto.bibliotecalivre.model.Cidade;
 import com.deolino.neto.bibliotecalivre.model.Livro;
 import com.deolino.neto.bibliotecalivre.model.User;
@@ -127,6 +128,20 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
         //request.get(ServerRequest.FIND_LIVRO_BY_NAME, "celular"); // para teste
         //request.get(ServerRequest.ALL_LIVROS, null); // para teste
         //request.get(ServerRequest.REMOVE_LIVRO_BY_NAME, "limoeiro"); // para teste
+
+        Biblioteca biblioteca = new Biblioteca(); // para teste
+        biblioteca.setNome("Municipal de São João"); // para teste
+        biblioteca.setEndereco("Centro, praça da matriz"); // para teste
+
+        Cidade cidade = new Cidade(); // para teste
+        cidade.setNome("São João do Jaguaribe"); // para teste
+        cidade.setEstado("CE"); // para teste
+        cidade.setCodigo(5); // para teste
+
+        biblioteca.setCidade(cidade); // para teste
+        biblioteca.setLivros(null); // para teste
+
+        request.post(ServerRequest.SAVE_BIBLIOTECA, biblioteca); // para teste
     }
 
     @Override
@@ -174,6 +189,10 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
                     e.printStackTrace();
                     Log.e(Constants.LOG_TAG, "LOL--> " + e.toString());
                 }
+            }
+        } else if (requestUrl.equals(ServerRequest.SAVE_LIVRO)) {
+            if (response.getResult()) {
+                Toast.makeText(this, "Cadastro realizado com sucesso!", Toast.LENGTH_LONG).show();
             }
         } else {
             Log.d(Constants.LOG_TEST, "REQUEST NÃO TRATADO AINDA :)");
