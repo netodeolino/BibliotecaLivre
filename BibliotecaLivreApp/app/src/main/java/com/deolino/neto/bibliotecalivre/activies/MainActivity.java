@@ -141,6 +141,7 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
         biblioteca.setCidade(cidade); // para teste
         biblioteca.setLivros(null); // para teste
 
+        // NAO ESTA FUNFANDO
         request.post(ServerRequest.SAVE_BIBLIOTECA, biblioteca); // para teste
     }
 
@@ -190,6 +191,7 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
                     Log.e(Constants.LOG_TAG, "LOL--> " + e.toString());
                 }
             }
+            // PARA TEST
         } else if (requestUrl.equals(ServerRequest.SAVE_LIVRO)) {
             if (response.getResult()) {
                 Toast.makeText(this, "Cadastro realizado com sucesso!", Toast.LENGTH_LONG).show();

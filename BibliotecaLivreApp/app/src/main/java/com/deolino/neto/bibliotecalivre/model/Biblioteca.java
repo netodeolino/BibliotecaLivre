@@ -9,8 +9,8 @@ import java.util.List;
 public class Biblioteca {
     private String nome;
     private String endereco;
-    private Cidade cidade;
-    private List<Livro> livros;
+    private Cidade cidade; // NÃO ESTA FUNFANDO
+    private List<Livro> livros; // NÃO ESTA FUNFANDO
 
     public Biblioteca () {}
 

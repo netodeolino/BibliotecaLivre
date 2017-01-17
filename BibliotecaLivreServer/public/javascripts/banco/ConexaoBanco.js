@@ -1,5 +1,4 @@
 var mongoose = require('mongoose');
-mongoose.Promise = global.Promise;
 
 // Mongoose Schema definition
 var Schema = mongoose.Schema;
@@ -33,7 +32,7 @@ var LivroSchema = new Schema({
 var BibliotecaSchema = new Schema({
 	nome: String,
 	endereco: String,
-	cidade: [{type: Schema.Types.ObjectId, ref: 'Cidade'}],
+	cidade: [{type: Schema.Types.ObjectId, ref: 'Cidade'}], // Não está funfando
 	livros: [{type: Schema.Types.ObjectId, ref: 'Livro'}]
 }, {
 	versionKey: false // You should be aware of the outcome after set to false
