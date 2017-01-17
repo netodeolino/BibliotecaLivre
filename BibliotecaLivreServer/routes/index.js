@@ -4,6 +4,7 @@ var router = express.Router();
 var UserController = require('../public/javascripts/controller/UserController');
 var LivroController = require('../public/javascripts/controller/LivroController');
 var CidadeController = require('../public/javascripts/controller/CidadeController');
+var BibliotecaController = require('../public/javascripts/controller/BibliotecaController');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -36,5 +37,11 @@ router.get('/findcidadebycodigo/:codigo', CidadeController.findCidadeByCodigo); 
 router.get('/findcidadebyname/:nome', CidadeController.findCidadeByName); // Test
 router.get('/removecidadebyname/:nome', CidadeController.removeCidadeByName); // Test
 router.get('/removecidadebycodigo/:codigo', CidadeController.updateCidadeByCodigo); // Test
+
+/* Biblioteca POST*/
+router.post('/savebiblioteca', BibliotecaController.saveBiblioteca); // Test
+
+/* Biblioteca GET */
+
 
 module.exports = router;

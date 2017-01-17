@@ -31,6 +31,10 @@ public class ServerRequest {
     public static final String ALL_CIDADES_BY_ESTADO = "findallcidadesbyestado/";
     public static final String SAVE_CIDADE = "savecidade";
 
+    /* BIBLIOTECA */
+    public static final String SAVE_BIBLIOTECA = "savebiblioteca";
+
+
     private OptimusHTTP client;
     private ServerResponseListener listener;
     private Gson gson;
