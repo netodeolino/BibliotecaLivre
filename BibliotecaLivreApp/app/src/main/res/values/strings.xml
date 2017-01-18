@@ -24,6 +24,9 @@
     <string name="update_livro">Atualizar Livro</string>
     <string name="description_livro">Descrição do Livro</string>
 
+    <!-- Cidade -->
+    <string name="estado">Estado</string>
+
     <!-- Spinners -->
     <string-array name="states_array">
         <item>AC</item>

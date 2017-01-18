@@ -76,13 +76,18 @@
     </style>
 
     <!-- Cidade Adapter -->
-
     <style name="cidadeName">
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:textSize">20dp</item>
     </style>
 
+    <!-- Estado -->
+    <style name="tvEstado">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">20dp</item>
+    </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
