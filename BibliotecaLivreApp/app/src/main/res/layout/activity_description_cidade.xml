@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/estado"
-        android:id="@+id/tvDescriptionCidade"
+        android:id="@+id/tvDescriptionEstado"
         android:layout_marginTop="10dp"
         style="@style/tvEstado"/>
 
