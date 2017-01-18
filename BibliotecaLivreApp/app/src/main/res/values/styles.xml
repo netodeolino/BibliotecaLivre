@@ -82,6 +82,13 @@
         <item name="android:textSize">20dp</item>
     </style>
 
+    <!-- Biblioteca Adapter -->
+    <style name="bibliotecaName">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
     <!-- Estado -->
     <style name="tvEstado">
         <item name="android:gravity">center</item>
