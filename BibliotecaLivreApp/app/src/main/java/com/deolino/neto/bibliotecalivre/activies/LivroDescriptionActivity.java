@@ -54,7 +54,7 @@ public class LivroDescriptionActivity extends AppCompatActivity implements Serve
         this.serverRequest = new ServerRequest(this, this);
 
         // PARA TEST DE TELA E AFINS DE DESCRIÇAO E ATUALIZAÇAO
-        serverRequest.get(ServerRequest.FIND_LIVRO_BY_NAME, "celular"); // para teste
+        //serverRequest.get(ServerRequest.FIND_LIVRO_BY_NAME, "celular"); // para teste
     }
 
     @Override
