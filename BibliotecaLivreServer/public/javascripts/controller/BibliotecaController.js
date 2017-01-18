@@ -12,28 +12,12 @@ exports.allBibliotecas = function (req, res, next) {
     });
 }
 
-exports.allBibliotecasByEstado = function (req, res, next) {
-	// body...
-	var est = req.params.estado;
-
-	Biblioteca.find({estado: est}, function (err, docs) {
-		if (err) {
-			res.json({result: false, data: null});
-		}
-        res.json({result: true, data: docs});
-    });
-}
-
-/* Test */
 exports.saveBiblioteca = function (req, res, next) {
 	new Biblioteca({
 		nome: req.body.nome,
-		endereco: req.body.endereco,
-    	cidade: req.body.cidade,
-    	livros: req.body.livros
+		endereco: req.body.endereco
 	}).save(function(err, biblioteca, count){
 		if (err) {
-			//return res.send();
 			res.json({result: false, data: null});
 		}
 		res.json({result: true, data: biblioteca});

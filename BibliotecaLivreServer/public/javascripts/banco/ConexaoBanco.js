@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
 
 // Mongoose Schema definition
 var Schema = mongoose.Schema;
@@ -24,16 +25,18 @@ var LivroSchema = new Schema({
     ano: Number,
     ISBN: String,
     autor: String,
-    categoria: String
+    categoria: String,
+    biblioteca: {
+    		nome: String,
+    		endereco: String
+    	}
 }, {
 	versionKey: false // You should be aware of the outcome after set to false
 });
 
 var BibliotecaSchema = new Schema({
 	nome: String,
-	endereco: String,
-	cidade: [{type: Schema.Types.ObjectId, ref: 'Cidade'}], // Não está funfando
-	livros: [{type: Schema.Types.ObjectId, ref: 'Livro'}]
+	endereco: String
 }, {
 	versionKey: false // You should be aware of the outcome after set to false
 });

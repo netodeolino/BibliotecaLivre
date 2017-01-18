@@ -39,7 +39,7 @@ router.get('/removecidadebyname/:nome', CidadeController.removeCidadeByName); //
 router.get('/removecidadebycodigo/:codigo', CidadeController.updateCidadeByCodigo); // Test
 
 /* Biblioteca POST*/
-router.post('/savebiblioteca', BibliotecaController.saveBiblioteca); // Test
+router.post('/savebiblioteca', BibliotecaController.saveBiblioteca);
 
 /* Biblioteca GET */
 

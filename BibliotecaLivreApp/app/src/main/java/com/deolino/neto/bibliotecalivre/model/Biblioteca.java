@@ -9,10 +9,13 @@ import java.util.List;
 public class Biblioteca {
     private String nome;
     private String endereco;
-    private Cidade cidade; // NÃO ESTA FUNFANDO
-    private List<Livro> livros; // NÃO ESTA FUNFANDO
 
     public Biblioteca () {}
+
+    public Biblioteca (String nome, String endereco) {
+        this.nome = nome;
+        this.endereco = endereco;
+    }
 
     public String getNome() {
         return nome;
@@ -28,21 +31,5 @@ public class Biblioteca {
 
     public void setEndereco(String endereco) {
         this.endereco = endereco;
-    }
-
-    public Cidade getCidade() {
-        return cidade;
-    }
-
-    public void setCidade(Cidade cidade) {
-        this.cidade = cidade;
-    }
-
-    public List<Livro> getLivros() {
-        return livros;
-    }
-
-    public void setLivros(List<Livro> livros) {
-        this.livros = livros;
     }
 }

@@ -34,7 +34,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements ServerResponseListener, AdapterView.OnItemSelectedListener {
 
-    //private User user;
     private Livro livrao;
 
     private ArrayList<Cidade> cidades = new ArrayList<Cidade>();
@@ -61,8 +60,6 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
 
         this.request = new ServerRequest(this, this);
         this.context = this;
-        //this.user = new User();
-        //this.user.setId("1"); //NÃO TENHO LOGIN e isso não está sendo utilizado também no momento
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.states_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -129,20 +126,13 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
         //request.get(ServerRequest.ALL_LIVROS, null); // para teste
         //request.get(ServerRequest.REMOVE_LIVRO_BY_NAME, "limoeiro"); // para teste
 
-        Biblioteca biblioteca = new Biblioteca(); // para teste
-        biblioteca.setNome("Municipal de São João"); // para teste
-        biblioteca.setEndereco("Centro, praça da matriz"); // para teste
+        /* Para teste
+        Biblioteca biblioteca = new Biblioteca();
+        biblioteca.setNome("Municipal de Russas");
+        biblioteca.setEndereco("Centro, praça da matriz");
 
-        Cidade cidade = new Cidade(); // para teste
-        cidade.setNome("São João do Jaguaribe"); // para teste
-        cidade.setEstado("CE"); // para teste
-        cidade.setCodigo(5); // para teste
-
-        biblioteca.setCidade(cidade); // para teste
-        biblioteca.setLivros(null); // para teste
-
-        // NAO ESTA FUNFANDO
-        request.post(ServerRequest.SAVE_BIBLIOTECA, biblioteca); // para teste
+        request.post(ServerRequest.SAVE_BIBLIOTECA, biblioteca);
+        */
     }
 
     @Override
@@ -190,11 +180,6 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
                     e.printStackTrace();
                     Log.e(Constants.LOG_TAG, "LOL--> " + e.toString());
                 }
-            }
-            // PARA TEST
-        } else if (requestUrl.equals(ServerRequest.SAVE_LIVRO)) {
-            if (response.getResult()) {
-                Toast.makeText(this, "Cadastro realizado com sucesso!", Toast.LENGTH_LONG).show();
             }
         } else {
             Log.d(Constants.LOG_TEST, "REQUEST NÃO TRATADO AINDA :)");
