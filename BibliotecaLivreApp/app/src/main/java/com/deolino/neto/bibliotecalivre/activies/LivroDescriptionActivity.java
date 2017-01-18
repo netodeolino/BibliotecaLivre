@@ -60,7 +60,7 @@ public class LivroDescriptionActivity extends AppCompatActivity implements Serve
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_description, menu);
+        getMenuInflater().inflate(R.menu.menu_description_livro, menu);
         return true;
     }
 
