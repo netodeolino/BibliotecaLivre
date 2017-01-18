@@ -57,6 +57,8 @@ public class CidadeDescriptionActivity extends AppCompatActivity implements Serv
         this.serverRequest = new ServerRequest(this, this);
         this.context = this;
 
+        // CARREGAR O QUE FOI PASSADO NA TELA ANTERIOR
+
         /*this.listViewBibliotecas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
