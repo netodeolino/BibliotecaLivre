@@ -1,7 +1,5 @@
 package com.deolino.neto.bibliotecalivre.model;
 
-import java.util.List;
-
 /**
  * Created by neto on 16/01/17.
  */
@@ -9,12 +7,15 @@ import java.util.List;
 public class Biblioteca {
     private String nome;
     private String endereco;
+    private String cidade;
 
-    public Biblioteca () {}
+    public Biblioteca() {
+    }
 
-    public Biblioteca (String nome, String endereco) {
+    public Biblioteca(String nome, String endereco, String cidade) {
         this.nome = nome;
         this.endereco = endereco;
+        this.cidade = cidade;
     }
 
     public String getNome() {
@@ -31,5 +32,13 @@ public class Biblioteca {
 
     public void setEndereco(String endereco) {
         this.endereco = endereco;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
     }
 }

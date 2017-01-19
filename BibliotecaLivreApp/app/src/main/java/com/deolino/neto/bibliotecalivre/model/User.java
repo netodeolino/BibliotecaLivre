@@ -5,7 +5,6 @@ package com.deolino.neto.bibliotecalivre.model;
  */
 
 public class User {
-    private String id;
     private String first_name;
     private String last_name;
     private String email;
@@ -24,14 +23,6 @@ public class User {
 
     public void setFirst_name(String first_name) {
         this.first_name = first_name;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getLast_name() {

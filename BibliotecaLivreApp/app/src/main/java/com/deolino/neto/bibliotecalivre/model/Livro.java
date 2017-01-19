@@ -10,7 +10,6 @@ public class Livro {
     private String ISBN;
     private String autor;
     private String categoria;
-    private Biblioteca biblioteca;
 
     public Livro () {}
 
@@ -20,15 +19,6 @@ public class Livro {
         this.ISBN = ISBN;
         this.autor = autor;
         this.categoria = categoria;
-    }
-
-    public Livro (String nome, int ano, String ISBN, String autor, String categoria, Biblioteca biblioteca) {
-        this.nome = nome;
-        this.ano = ano;
-        this.ISBN = ISBN;
-        this.autor = autor;
-        this.categoria = categoria;
-        this.biblioteca = biblioteca;
     }
 
     public String getNome() {
@@ -69,13 +59,5 @@ public class Livro {
 
     public void setCategoria(String categoria) {
         this.categoria = categoria;
-    }
-
-    public Biblioteca getBiblioteca() {
-        return biblioteca;
-    }
-
-    public void setBiblioteca(Biblioteca biblioteca) {
-        this.biblioteca = biblioteca;
     }
 }

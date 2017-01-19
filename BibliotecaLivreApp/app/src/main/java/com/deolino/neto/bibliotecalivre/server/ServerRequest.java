@@ -33,6 +33,7 @@ public class ServerRequest {
 
     /* BIBLIOTECA */
     public static final String SAVE_BIBLIOTECA = "savebiblioteca";
+    public static final String FIND_BIBLIOTECA_BY_CIDADE = "findbibliotecabycidade/";
 
 
     private OptimusHTTP client;

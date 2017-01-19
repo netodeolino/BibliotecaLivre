@@ -48,6 +48,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activies.MainActivity" />
         </activity>
+
+        <activity
+            android:name=".activies.CidadeDescriptionActivity"
+            android:label="@string/description_cidade"
+            android:parentActivityName=".activies.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activies.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

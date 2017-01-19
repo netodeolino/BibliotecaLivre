@@ -4,8 +4,8 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="124dp"
+        android:layout_width="124dp"
         android:id="@+id/imageCidade"
         android:scaleType="centerCrop"
         android:layout_gravity="center_horizontal" />

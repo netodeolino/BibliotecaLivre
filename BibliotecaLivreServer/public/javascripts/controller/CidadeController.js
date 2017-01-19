@@ -12,15 +12,16 @@ exports.allCidades = function (req, res, next) {
     });
 }
 
+/* Test */
 exports.allCidadesByEstado = function (req, res, next) {
 	// body...
 	var est = req.params.estado;
 
-	Cidade.find({estado: est}, function (err, docs) {
+	Cidade.find({estado: est}, function (err, cidade) {
 		if (err) {
 			res.json({result: false, data: null});
 		}
-        res.json({result: true, data: docs});
+        res.json({result: true, data: cidade});
     });
 }
 
@@ -31,7 +32,6 @@ exports.saveCidade = function (req, res, next) {
     	estado: req.body.estado,
     	codigo: req.body.codigo
 	}).save(function(err, cidade, count){
-		//res.redirect('/');
 		if (err) {
 			res.json({result: false, data: null});
 		}

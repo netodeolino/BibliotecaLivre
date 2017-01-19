@@ -1,19 +1,29 @@
 package com.deolino.neto.bibliotecalivre.model;
 
+import java.util.ArrayList;
+
 /**
  * Created by neto on 14/01/17.
  */
 
 public class Cidade {
-    private String nome;
-    private String estado;
     private int codigo;
+    private String nome;
+    private String siglaEstado;
 
     public Cidade () {}
 
-    public Cidade (String nome, String estado, int codigo) {
+    public Cidade (int codigo, String nome, String siglaEstado) {
+        this.codigo = codigo;
         this.nome = nome;
-        this.estado = estado;
+        this.siglaEstado = siglaEstado;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 
@@ -25,19 +35,11 @@ public class Cidade {
         this.nome = nome;
     }
 
-    public String getEstado() {
-        return estado;
+    public String getSiglaEstado() {
+        return siglaEstado;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
-
-    public int getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
+    public void setSiglaEstado(String siglaEstado) {
+        this.siglaEstado = siglaEstado;
     }
 }

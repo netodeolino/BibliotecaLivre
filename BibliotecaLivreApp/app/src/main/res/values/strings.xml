@@ -26,6 +26,7 @@
 
     <!-- Cidade -->
     <string name="estado">Estado</string>
+    <string name="description_cidade">Descrição da Cidade</string>
 
     <!-- Spinners -->
     <string-array name="states_array">

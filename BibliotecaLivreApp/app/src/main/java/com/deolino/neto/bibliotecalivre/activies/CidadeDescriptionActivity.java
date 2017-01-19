@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.deolino.neto.bibliotecalivre.R;
+import com.deolino.neto.bibliotecalivre.adapters.BibliotecaAdapter;
 import com.deolino.neto.bibliotecalivre.constants.Constants;
 import com.deolino.neto.bibliotecalivre.interfaces.ServerResponseListener;
 import com.deolino.neto.bibliotecalivre.model.Biblioteca;
@@ -57,7 +58,7 @@ public class CidadeDescriptionActivity extends AppCompatActivity implements Serv
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_description_cidade);
 
-        this.imageViewCidade = (ImageView) findViewById(R.id.ivCidadeImage);
+        this.imageViewCidade = (ImageView) findViewById(R.id.imageCidade);
         this.textViewNome = (TextView) findViewById(R.id.tvDescriptionName);
         this.textViewEstado = (TextView) findViewById(R.id.tvDescriptionEstado);
         this.listViewBibliotecas = (ListView) findViewById(R.id.lvBibliotecas);
@@ -116,19 +117,37 @@ public class CidadeDescriptionActivity extends AppCompatActivity implements Serv
                         Cidade c = new Cidade();
 
                         c.setNome(mp.get("nome").toString());
-                        c.setEstado(mp.get("estado").toString());
                         c.setCodigo((int) Double.parseDouble(mp.get("codigo").toString()));
+                        c.setSiglaEstado(mp.get("estado").toString());
 
                         this.cidade = c;
-
-                        updateActivityDescription();
                     }
+                    updateActivityDescription();
                 } catch (Exception e) {
                     e.printStackTrace();
                     Log.e(Constants.LOG_TAG, "LOL--> " + e.toString());
                 }
             } else {
                 Toast.makeText(this, "Não foi possível realizar a operação!", Toast.LENGTH_LONG).show();
+            }
+        } else if (requestUrl.equals(ServerRequest.FIND_BIBLIOTECA_BY_CIDADE)) {
+            if (response.getResult()) {
+                ArrayList<LinkedTreeMap<String, Object>> data = (ArrayList<LinkedTreeMap<String, Object>>) response.getData();
+                try {
+                    for (LinkedTreeMap<String, Object> mp : data) {
+                        Biblioteca b = new Biblioteca();
+
+                        b.setNome(mp.get("nome").toString());
+                        b.setEndereco(mp.get("endereco").toString());
+                        b.setCidade(mp.get("cidade").toString());
+
+                        this.bibliotecas.add(b);
+                    }
+                    populateListBiblioteca();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Log.e(Constants.LOG_TAG, "LOL--> " + e.toString());
+                }
             }
         } else {
             Log.d(Constants.LOG_TEST, "REQUEST NÃO TRATADO AINDA :)");
@@ -144,6 +163,15 @@ public class CidadeDescriptionActivity extends AppCompatActivity implements Serv
         // AJEITAR A IMAGEM, ESTÁ UMA FIXA
         this.imageViewCidade.setImageResource(R.drawable.cidade_icon);
         this.textViewNome.setText(cidade.getNome());
-        this.textViewEstado.setText(cidade.getEstado());
+        this.textViewEstado.setText(cidade.getSiglaEstado());
+
+        serverRequest.get(ServerRequest.FIND_BIBLIOTECA_BY_CIDADE, cidade.getNome());
+    }
+
+    private void populateListBiblioteca() {
+        Log.d(Constants.LOG_TEST, this.bibliotecas.size()+"");
+
+        BibliotecaAdapter bibliotecaAdapter = new BibliotecaAdapter(getApplicationContext(), this.bibliotecas);
+        listViewBibliotecas.setAdapter(bibliotecaAdapter);
     }
 }

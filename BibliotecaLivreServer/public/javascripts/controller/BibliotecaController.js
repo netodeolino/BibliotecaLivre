@@ -15,7 +15,8 @@ exports.allBibliotecas = function (req, res, next) {
 exports.saveBiblioteca = function (req, res, next) {
 	new Biblioteca({
 		nome: req.body.nome,
-		endereco: req.body.endereco
+		endereco: req.body.endereco,
+		cidade: req.body.cidade
 	}).save(function(err, biblioteca, count){
 		if (err) {
 			res.json({result: false, data: null});
@@ -30,6 +31,19 @@ exports.findBibliotecaByName = function (req, res, next) {
 	var nome = req.params.nome;
 
 	Biblioteca.find({nome: nome}, function (err, biblioteca) {
+		if (err) {
+			res.json({result: false, data: null});
+		}
+        res.json({result: true, data: biblioteca});
+    });
+}
+
+/* Test */
+exports.findBibliotecaByCidade = function (req, res, next) {
+	// body...
+	var cid = req.params.cidade;
+
+	Biblioteca.find({cidade: cid}, function (err, biblioteca) {
 		if (err) {
 			res.json({result: false, data: null});
 		}
