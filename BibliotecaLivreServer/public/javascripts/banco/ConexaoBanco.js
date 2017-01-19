@@ -25,11 +25,7 @@ var LivroSchema = new Schema({
     ano: Number,
     ISBN: String,
     autor: String,
-    categoria: String,
-    biblioteca: {
-    		nome: String,
-    		endereco: String
-    	}
+    categoria: String
 }, {
 	versionKey: false // You should be aware of the outcome after set to false
 });
@@ -41,11 +37,34 @@ var BibliotecaSchema = new Schema({
 	versionKey: false // You should be aware of the outcome after set to false
 });
 
+var SchemaBibliotecaLivre = new Schema({
+	nome_estado: String,
+	sigla_estado: String,
+	cidade: [{
+		nome_cidade: String,
+		codigo_cidade: Number,
+		biblioteca: [{
+			nome_biblioteca: String,
+			endereco: String,
+			livro: [{
+				nome_livro: String,
+				ano_livro: Number,
+				ISBN_livro: String,
+				autor_livro: String,
+				categoria: String
+			}]
+		}]
+	}]
+}, {
+	versionKey: false // You should be aware of the outcome after set to false
+});
+
 // Mongoose Model definition
 mongoose.model('User', UserSchema);
 mongoose.model('Cidade', CidadeSchema);
 mongoose.model('Livro', LivroSchema);
 mongoose.model('Biblioteca', BibliotecaSchema);
+mongoose.model('SchemaBibliotecaLivre', SchemaBibliotecaLivre); // Test
 
 // Base connection
 mongoose.connect('mongodb://localhost/BibliotecaLivre');
