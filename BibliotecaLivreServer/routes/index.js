@@ -38,11 +38,12 @@ router.get('/findcidadebyname/:nome', CidadeController.findCidadeByName); // Tes
 router.get('/removecidadebyname/:nome', CidadeController.removeCidadeByName); // Test
 router.get('/removecidadebycodigo/:codigo', CidadeController.updateCidadeByCodigo); // Test
 
+
 /* Biblioteca POST*/
 router.post('/savebiblioteca', BibliotecaController.saveBiblioteca);
 
 /* Biblioteca GET */
-router.get('/findbibliotecabycidade/:cidade', BibliotecaController.findBibliotecaByCidade);
+router.get('/findbibliotecabycidade/:cidadecod', BibliotecaController.findBibliotecaByCidade);
 
 
 module.exports = router;

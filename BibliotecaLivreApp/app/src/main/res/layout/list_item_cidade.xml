@@ -26,7 +26,7 @@
         <ImageView
             android:id="@+id/ivCidadeImage"
             android:layout_height="124dp"
-            android:layout_width="122dp"
+            android:layout_width="match_parent"
             android:src="@drawable/cidade_icon" />
         </LinearLayout>
 

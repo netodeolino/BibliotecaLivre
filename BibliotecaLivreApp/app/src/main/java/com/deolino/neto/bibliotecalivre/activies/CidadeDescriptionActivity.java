@@ -139,7 +139,7 @@ public class CidadeDescriptionActivity extends AppCompatActivity implements Serv
 
                         b.setNome(mp.get("nome").toString());
                         b.setEndereco(mp.get("endereco").toString());
-                        b.setCidade(mp.get("cidade").toString());
+                        b.setCidade((int) Double.parseDouble(mp.get("cidadecod").toString()));
 
                         this.bibliotecas.add(b);
                     }
@@ -165,7 +165,7 @@ public class CidadeDescriptionActivity extends AppCompatActivity implements Serv
         this.textViewNome.setText(cidade.getNome());
         this.textViewEstado.setText(cidade.getSiglaEstado());
 
-        serverRequest.get(ServerRequest.FIND_BIBLIOTECA_BY_CIDADE, cidade.getNome());
+        serverRequest.get(ServerRequest.FIND_BIBLIOTECA_BY_CIDADE, cidade.getCodigo());
     }
 
     private void populateListBiblioteca() {

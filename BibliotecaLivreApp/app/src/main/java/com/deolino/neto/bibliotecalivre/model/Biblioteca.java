@@ -7,12 +7,12 @@ package com.deolino.neto.bibliotecalivre.model;
 public class Biblioteca {
     private String nome;
     private String endereco;
-    private String cidade;
+    private int cidade;
 
     public Biblioteca() {
     }
 
-    public Biblioteca(String nome, String endereco, String cidade) {
+    public Biblioteca(String nome, String endereco, int cidade) {
         this.nome = nome;
         this.endereco = endereco;
         this.cidade = cidade;
@@ -34,11 +34,11 @@ public class Biblioteca {
         this.endereco = endereco;
     }
 
-    public String getCidade() {
+    public int getCidade() {
         return cidade;
     }
 
-    public void setCidade(String cidade) {
+    public void setCidade(int cidade) {
         this.cidade = cidade;
     }
 }
