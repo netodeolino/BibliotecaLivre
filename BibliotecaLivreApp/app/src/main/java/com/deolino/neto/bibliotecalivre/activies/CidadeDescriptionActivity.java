@@ -36,13 +36,17 @@ public class CidadeDescriptionActivity extends AppCompatActivity implements Serv
 
     private ListView listViewBibliotecas;
 
-    ArrayList<Biblioteca> bibliotecas = new ArrayList<Biblioteca>();
+    private ArrayList<Biblioteca> bibliotecas = new ArrayList<Biblioteca>();
 
     private ServerRequest serverRequest;
 
     private Context context;
 
     private String bibliotecaName;
+
+    private int cidadeCodigo;
+
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +62,8 @@ public class CidadeDescriptionActivity extends AppCompatActivity implements Serv
         this.context = this;
 
         // CARREGAR O QUE FOI PASSADO NA TELA ANTERIOR
+        this.intent = getIntent();
+        this.cidadeCodigo = intent.getIntExtra("cidadeCodigo", 0);
 
         /*this.listViewBibliotecas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
