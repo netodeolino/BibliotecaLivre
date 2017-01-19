@@ -23,6 +23,7 @@ public class BibliotecaDescriptionActivity extends AppCompatActivity implements 
         //this.context = this;
 
         // CARREGAR O QUE FOI PASSADO NA TELA ANTERIOR
+        // From CidadeDescriptionActivity
 
 
     }

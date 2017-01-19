@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.deolino.neto.bibliotecalivre.R;
 import com.deolino.neto.bibliotecalivre.constants.Constants;
@@ -20,6 +21,7 @@ import com.deolino.neto.bibliotecalivre.model.Biblioteca;
 import com.deolino.neto.bibliotecalivre.model.Cidade;
 import com.deolino.neto.bibliotecalivre.server.Response;
 import com.deolino.neto.bibliotecalivre.server.ServerRequest;
+import com.google.gson.internal.LinkedTreeMap;
 
 import java.util.ArrayList;
 
@@ -48,6 +50,8 @@ public class CidadeDescriptionActivity extends AppCompatActivity implements Serv
 
     private Intent intent;
 
+    private Cidade cidade;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,10 +64,13 @@ public class CidadeDescriptionActivity extends AppCompatActivity implements Serv
 
         this.serverRequest = new ServerRequest(this, this);
         this.context = this;
+        this.cidade = new Cidade();
 
-        // CARREGAR O QUE FOI PASSADO NA TELA ANTERIOR
+        // From MainActivity
         this.intent = getIntent();
         this.cidadeCodigo = intent.getIntExtra("cidadeCodigo", 0);
+
+        serverRequest.get(ServerRequest.FIND_CIDADE_BY_CODIGO, cidadeCodigo);
 
         /*this.listViewBibliotecas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -101,11 +108,42 @@ public class CidadeDescriptionActivity extends AppCompatActivity implements Serv
 
     @Override
     public void onSuccess(Response response, String requestUrl) {
+        if (requestUrl.equals(ServerRequest.FIND_CIDADE_BY_CODIGO)) {
+            if (response.getResult()) {
+                ArrayList<LinkedTreeMap<String, Object>> data = (ArrayList<LinkedTreeMap<String, Object>>) response.getData();
+                try {
+                    for (LinkedTreeMap<String, Object> mp : data) {
+                        Cidade c = new Cidade();
 
+                        c.setNome(mp.get("nome").toString());
+                        c.setEstado(mp.get("estado").toString());
+                        c.setCodigo((int) Double.parseDouble(mp.get("codigo").toString()));
+
+                        this.cidade = c;
+
+                        updateActivityDescription();
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Log.e(Constants.LOG_TAG, "LOL--> " + e.toString());
+                }
+            } else {
+                Toast.makeText(this, "Não foi possível realizar a operação!", Toast.LENGTH_LONG).show();
+            }
+        } else {
+            Log.d(Constants.LOG_TEST, "REQUEST NÃO TRATADO AINDA :)");
+        }
     }
 
     @Override
     public void onFailure(Response response, String requestUrl) {
 
+    }
+
+    private void updateActivityDescription() {
+        // AJEITAR A IMAGEM, ESTÁ UMA FIXA
+        this.imageViewCidade.setImageResource(R.drawable.cidade_icon);
+        this.textViewNome.setText(cidade.getNome());
+        this.textViewEstado.setText(cidade.getEstado());
     }
 }
