@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.deolino.neto.bibliotecalivre.R;
 import com.deolino.neto.bibliotecalivre.model.Livro;
@@ -31,7 +33,13 @@ public class LivroAdapter extends ArrayAdapter<Livro> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item_livro, parent, false);
         }
 
+        TextView textViewNome = (TextView) convertView.findViewById(R.id.tvLivroNome);
+        TextView textViewCategoria = (TextView) convertView.findViewById(R.id.tvLivroCategoria);
+        ImageView imageViewLivro = (ImageView) convertView.findViewById(R.id.ivLivroImage);
 
+        textViewNome.setText(livro.getNome());
+        textViewCategoria.setText(livro.getCategoria());
+        imageViewLivro.setImageResource(R.drawable.livro_icon);
 
         return convertView;
     }

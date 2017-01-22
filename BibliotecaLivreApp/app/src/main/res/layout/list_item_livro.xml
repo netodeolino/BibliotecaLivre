@@ -27,7 +27,7 @@
         android:layout_width="192dp"
         android:layout_height="124dp">
         <ImageView
-            android:id="@+id/ivLivroImage02"
+            android:id="@+id/ivLivroImage"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             android:src="@drawable/livro_icon" />
