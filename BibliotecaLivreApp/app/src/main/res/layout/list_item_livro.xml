@@ -8,11 +8,18 @@
         android:orientation="horizontal"
         android:layout_width="192dp"
         android:layout_height="124dp">
-        <ImageView
-            android:id="@+id/ivLivroImage01"
-            android:layout_height="124dp"
-            android:layout_width="match_parent"
-            android:src="@drawable/livro_icon" />
+        <TextView
+            android:id="@+id/tvLivroNome"
+            android:text="@string/nome"
+            android:layout_width="96dp"
+            android:layout_height="match_parent"
+            style="@style/tvNome" />
+        <TextView
+            android:id="@+id/tvLivroCategoria"
+            android:text="@string/categoria"
+            android:layout_width="96dp"
+            android:layout_height="match_parent"
+            style="@style/tvCategoria" />
     </LinearLayout>
 
     <LinearLayout
@@ -21,7 +28,7 @@
         android:layout_height="124dp">
         <ImageView
             android:id="@+id/ivLivroImage02"
-            android:layout_height="124dp"
+            android:layout_height="match_parent"
             android:layout_width="match_parent"
             android:src="@drawable/livro_icon" />
     </LinearLayout>
