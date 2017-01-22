@@ -19,7 +19,6 @@ exports.saveLivro = function (req, res, next) {
     	autor: req.body.autor,
     	categoria: req.body.categoria
 	}).save(function(err, livro, count){
-		//res.redirect('/');
 		if (err) {
 			res.json({result: false, data: null});
 		}

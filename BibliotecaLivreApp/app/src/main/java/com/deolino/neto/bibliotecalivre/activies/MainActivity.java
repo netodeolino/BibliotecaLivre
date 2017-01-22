@@ -126,14 +126,14 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
         //request.get(ServerRequest.ALL_LIVROS, null); // para teste
         //request.get(ServerRequest.REMOVE_LIVRO_BY_NAME, "limoeiro"); // para teste
 
-        /* Para teste */
+        /* Para teste
         Biblioteca biblioteca = new Biblioteca();
         biblioteca.setNome("Municipal de Tabuleiro do Norte");
         biblioteca.setEndereco("Centro, Rua da mosca");
         biblioteca.setCidade(1);
 
         request.post(ServerRequest.SAVE_BIBLIOTECA, biblioteca);
-
+        */
     }
 
     @Override
