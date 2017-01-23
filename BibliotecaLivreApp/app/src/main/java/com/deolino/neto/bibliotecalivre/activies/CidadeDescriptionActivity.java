@@ -172,6 +172,6 @@ public class CidadeDescriptionActivity extends AppCompatActivity implements Serv
         Log.d(Constants.LOG_TEST, this.bibliotecas.size()+"");
 
         BibliotecaAdapter bibliotecaAdapter = new BibliotecaAdapter(getApplicationContext(), this.bibliotecas);
-        listViewBibliotecas.setAdapter(bibliotecaAdapter);
+        this.listViewBibliotecas.setAdapter(bibliotecaAdapter);
     }
 }

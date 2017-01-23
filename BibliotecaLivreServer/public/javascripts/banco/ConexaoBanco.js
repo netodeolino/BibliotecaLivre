@@ -38,6 +38,17 @@ var BibliotecaSchema = new Schema({
 	versionKey: false // You should be aware of the outcome after set to false
 });
 
+// Mongoose Model definition
+mongoose.model('User', UserSchema);
+mongoose.model('Cidade', CidadeSchema);
+mongoose.model('Livro', LivroSchema);
+mongoose.model('Biblioteca', BibliotecaSchema);
+
+// Base connection
+mongoose.connect('mongodb://localhost/BibliotecaLivre');
+
+
+/*
 var SchemaBibliotecaLivre = new Schema({
 	codigo_cidade: Number,
 	nome_cidade: String,
@@ -56,12 +67,4 @@ var SchemaBibliotecaLivre = new Schema({
 }, {
 	versionKey: false // You should be aware of the outcome after set to false
 });
-
-// Mongoose Model definition
-mongoose.model('User', UserSchema);
-mongoose.model('Cidade', CidadeSchema);
-mongoose.model('Livro', LivroSchema);
-mongoose.model('Biblioteca', BibliotecaSchema);
-
-// Base connection
-mongoose.connect('mongodb://localhost/BibliotecaLivre');
+*/
