@@ -26,7 +26,6 @@ var LivroSchema = new Schema({
     ISBN: String,
     autor: String,
     categoria: String,
-    bibliotecacod: Number
 }, {
 	versionKey: false // You should be aware of the outcome after set to false
 });
