@@ -45,7 +45,7 @@ public class CidadeDescriptionActivity extends AppCompatActivity implements Serv
 
     private Context context;
 
-    private String bibliotecaName;
+    private int bibliotecaCod;
 
     private int cidadeCodigo;
 
@@ -73,17 +73,17 @@ public class CidadeDescriptionActivity extends AppCompatActivity implements Serv
 
         serverRequest.get(ServerRequest.FIND_CIDADE_BY_CODIGO, cidadeCodigo);
 
-        /*this.listViewBibliotecas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        this.listViewBibliotecas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Log.d(Constants.LOG_TEST, "Item " + position + " clicked");
 
-                bibliotecaName = bibliotecas.get(position).getNome();
+                bibliotecaCod = bibliotecas.get(position).getCidade();
                 Intent intent = new Intent(context, BibliotecaDescriptionActivity.class);
-                intent.putExtra("bibliotecaName", bibliotecaName);
+                intent.putExtra("bibliotecaCod", bibliotecaCod);
                 startActivity(intent);
             }
-        });*/
+        });
     }
 
     @Override

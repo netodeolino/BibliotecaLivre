@@ -33,7 +33,7 @@ public class BibliotecaDescriptionActivity extends AppCompatActivity implements 
 
     private Biblioteca biblioteca;
 
-    private String bibliotecaNome;
+    private int bibliotecaCod;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,10 +49,9 @@ public class BibliotecaDescriptionActivity extends AppCompatActivity implements 
         this.biblioteca = new Biblioteca();
 
         this.intent = getIntent();
-        this.bibliotecaNome = intent.getStringExtra("bibliotecaName");
+        this.bibliotecaCod = intent.getIntExtra("bibliotecaCod", 0);
 
-        serverRequest.get(ServerRequest.FIND_BIBLIOTECA_BY_NAME, bibliotecaNome);
-
+        serverRequest.get(ServerRequest.FIND_BIBLIOTECA_BY_CIDADE, bibliotecaCod);
     }
 
     @Override

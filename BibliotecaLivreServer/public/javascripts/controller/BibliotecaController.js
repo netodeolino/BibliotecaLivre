@@ -25,18 +25,6 @@ exports.saveBiblioteca = function (req, res, next) {
 	});
 }
 
-exports.findBibliotecaByName = function (req, res, next) {
-	// body...
-	var nom = req.params.nome;
-
-	Biblioteca.find({nome: nom}, function (err, biblioteca) {
-		if (err) {
-			res.json({result: false, data: null});
-		}
-        res.json({result: true, data: biblioteca});
-    });
-}
-
 exports.findBibliotecaByCidade = function (req, res, next) {
 	// body...
 	var cid = req.params.cidadecod;
