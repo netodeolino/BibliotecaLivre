@@ -107,6 +107,6 @@ public class BibliotecaDescriptionActivity extends AppCompatActivity implements 
         this.imageViewBiblioteca.setImageResource(R.drawable.biblioteca_icon);
         this.textViewNome.setText(biblioteca.getNome());
 
-        serverRequest.get(ServerRequest.FIND_LI);
+        serverRequest.get(ServerRequest.FIND_LIVRO);
     }
 }

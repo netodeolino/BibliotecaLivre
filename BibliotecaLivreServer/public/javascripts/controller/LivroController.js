@@ -51,6 +51,18 @@ exports.findLivroByName = function (req, res, next) {
     });
 }
 
+exports.findLivroByBiblioteca = function (req, res, next) {
+	// body...
+	var cod = req.params.bibliotecacod;
+
+	Livro.find({bibliotecacod: cod}, function (err, livro) {
+		if (err) {
+			res.json({result: false, data: null});
+		}
+        res.json({result: true, data: livro});
+    });
+}
+
 exports.removeLivroByName = function (req, res, next) {
 	// body...
 	var nome = req.params.nome;

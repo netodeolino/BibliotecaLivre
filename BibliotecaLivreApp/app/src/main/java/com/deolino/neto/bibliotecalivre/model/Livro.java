@@ -10,15 +10,17 @@ public class Livro {
     private String ISBN;
     private String autor;
     private String categoria;
+    private int biblioteca;
 
     public Livro () {}
 
-    public Livro (String nome, int ano, String ISBN, String autor, String categoria) {
+    public Livro (String nome, int ano, String ISBN, String autor, String categoria, int biblioteca) {
         this.nome = nome;
         this.ano = ano;
         this.ISBN = ISBN;
         this.autor = autor;
         this.categoria = categoria;
+        this.biblioteca = biblioteca;
     }
 
     public String getNome() {
@@ -59,5 +61,13 @@ public class Livro {
 
     public void setCategoria(String categoria) {
         this.categoria = categoria;
+    }
+
+    public int getBiblioteca() {
+        return biblioteca;
+    }
+
+    public void setBiblioteca(int biblioteca) {
+        this.biblioteca = biblioteca;
     }
 }
