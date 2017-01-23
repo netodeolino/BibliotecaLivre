@@ -44,6 +44,7 @@ router.post('/savebiblioteca', BibliotecaController.saveBiblioteca);
 
 /* Biblioteca GET */
 router.get('/findbibliotecabycidade/:cidadecod', BibliotecaController.findBibliotecaByCidade);
+router.get('/findbibliotecabyname/:nome', BibliotecaController.findBibliotecaByName);
 
 
 module.exports = router;

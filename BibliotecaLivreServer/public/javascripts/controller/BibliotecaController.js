@@ -25,12 +25,11 @@ exports.saveBiblioteca = function (req, res, next) {
 	});
 }
 
-/* Test */
 exports.findBibliotecaByName = function (req, res, next) {
 	// body...
-	var nome = req.params.nome;
+	var nom = req.params.nome;
 
-	Biblioteca.find({nome: nome}, function (err, biblioteca) {
+	Biblioteca.find({nome: nom}, function (err, biblioteca) {
 		if (err) {
 			res.json({result: false, data: null});
 		}
