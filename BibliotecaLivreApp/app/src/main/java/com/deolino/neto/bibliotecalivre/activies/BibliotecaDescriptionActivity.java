@@ -68,6 +68,8 @@ public class BibliotecaDescriptionActivity extends AppCompatActivity implements 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Log.d(Constants.LOG_TEST, "Item " + position + " clicked");
+
+                // Implementar a Descrição do Livro
             }
         });
     }

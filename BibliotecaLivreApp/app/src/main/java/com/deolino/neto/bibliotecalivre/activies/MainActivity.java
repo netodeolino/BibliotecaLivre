@@ -145,6 +145,7 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
         request.post(ServerRequest.SAVE_CIDADE, c);
         */
 
+        /* Para teste
         Livro l = new Livro();
         l.setNome("Meu limão, meu Limoeiro");
         l.setAno(1975);
@@ -154,6 +155,7 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
         l.setBiblioteca(0);
 
         request.post(ServerRequest.SAVE_LIVRO, l);
+        */
     }
 
     @Override
