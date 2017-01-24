@@ -17,7 +17,8 @@ exports.saveLivro = function (req, res, next) {
     	ano: req.body.ano,
     	ISBN: req.body.ISBN,
     	autor: req.body.autor,
-    	categoria: req.body.categoria
+    	categoria: req.body.categoria,
+    	bibliotecacod: req.body.biblioteca
 	}).save(function(err, livro, count){
 		if (err) {
 			res.json({result: false, data: null});

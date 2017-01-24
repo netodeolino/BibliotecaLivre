@@ -12,6 +12,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.deolino.neto.bibliotecalivre.R;
+import com.deolino.neto.bibliotecalivre.adapters.LivroAdapter;
 import com.deolino.neto.bibliotecalivre.constants.Constants;
 import com.deolino.neto.bibliotecalivre.interfaces.ServerResponseListener;
 import com.deolino.neto.bibliotecalivre.model.Biblioteca;
@@ -96,8 +97,18 @@ public class BibliotecaDescriptionActivity extends AppCompatActivity implements 
                 ArrayList<LinkedTreeMap<String, Object>> data = (ArrayList<LinkedTreeMap<String, Object>>) response.getData();
                 try {
                     for (LinkedTreeMap<String, Object> mp : data) {
+                        Livro l = new Livro();
 
+                        l.setNome(mp.get("nome").toString());
+                        l.setAno((int) Double.parseDouble(mp.get("ano").toString()));
+                        l.setISBN(mp.get("ISBN").toString());
+                        l.setAutor(mp.get("autor").toString());
+                        l.setCategoria(mp.get("categoria").toString());
+                        l.setBiblioteca((int) Double.parseDouble(mp.get("bibliotecacod").toString()));
+
+                        this.livros.add(l);
                     }
+                    populateListLivro();
                 } catch (Exception e) {
                     e.printStackTrace();
                     Log.e(Constants.LOG_TAG, "LOL--> " + e.toString());
@@ -119,5 +130,12 @@ public class BibliotecaDescriptionActivity extends AppCompatActivity implements 
         this.textViewNome.setText(biblioteca.getNome());
 
         serverRequest.get(ServerRequest.FIND_LIVRO_BY_BIBLIOTECA, biblioteca.getCodigo());
+    }
+
+    private void populateListLivro() {
+        Log.d(Constants.LOG_TEST, this.livros.size()+"");
+
+        LivroAdapter livroAdapter = new LivroAdapter(getApplicationContext(), this.livros);
+        this.listViewLivros.setAdapter(livroAdapter);
     }
 }

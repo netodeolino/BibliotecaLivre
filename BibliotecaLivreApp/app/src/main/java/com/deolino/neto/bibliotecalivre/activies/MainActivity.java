@@ -144,6 +144,16 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
 
         request.post(ServerRequest.SAVE_CIDADE, c);
         */
+
+        Livro l = new Livro();
+        l.setNome("Meu limão, meu Limoeiro");
+        l.setAno(1975);
+        l.setISBN("123-456-789");
+        l.setAutor("Dom Aureliano Matos");
+        l.setCategoria("Bibliografia");
+        l.setBiblioteca(0);
+
+        request.post(ServerRequest.SAVE_LIVRO, l);
     }
 
     @Override
