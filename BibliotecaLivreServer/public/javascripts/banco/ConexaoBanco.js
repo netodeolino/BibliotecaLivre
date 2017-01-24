@@ -26,6 +26,7 @@ var LivroSchema = new Schema({
     ISBN: String,
     autor: String,
     categoria: String,
+    bibliotecacod: Number
 }, {
 	versionKey: false // You should be aware of the outcome after set to false
 });
@@ -33,7 +34,8 @@ var LivroSchema = new Schema({
 var BibliotecaSchema = new Schema({
 	nome: String,
 	endereco: String,
-	cidadecod: Number
+	cidadecod: Number,
+	codigo: Number
 }, {
 	versionKey: false // You should be aware of the outcome after set to false
 });

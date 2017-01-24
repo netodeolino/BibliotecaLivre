@@ -28,7 +28,7 @@ router.get('/removelivrobyname/:nome', LivroController.removeLivroByName);
 
 
 /* Cidade POST */
-router.post('/savecidade', CidadeController.saveCidade); // Test
+router.post('/savecidade', CidadeController.saveCidade);
 router.post('/updatecidadebycodigo', CidadeController.updateCidadeByCodigo); // Test
 
 /* Cidade GET */

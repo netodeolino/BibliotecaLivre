@@ -128,11 +128,21 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
 
         /* Para teste
         Biblioteca biblioteca = new Biblioteca();
-        biblioteca.setNome("Municipal de Tabuleiro do Norte");
-        biblioteca.setEndereco("Centro, Rua da mosca");
-        biblioteca.setCidade(1);
+        biblioteca.setNome("Municipal de Russas");
+        biblioteca.setEndereco("Centro, Rua de trás");
+        biblioteca.setCidade(2);
+        biblioteca.setCodigo(1);
 
         request.post(ServerRequest.SAVE_BIBLIOTECA, biblioteca);
+        */
+
+        /* Para teste
+        Cidade c = new Cidade();
+        c.setCodigo(4);
+        c.setNome("Chorozinho");
+        c.setEstado("CE");
+
+        request.post(ServerRequest.SAVE_CIDADE, c);
         */
     }
 
@@ -172,7 +182,7 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
 
                         c.setNome(mp.get("nome").toString());
                         c.setCodigo((int) Double.parseDouble(mp.get("codigo").toString()));
-                        c.setSiglaEstado(mp.get("estado").toString());
+                        c.setEstado(mp.get("estado").toString());
 
                         this.cidades.add(c);
                     }

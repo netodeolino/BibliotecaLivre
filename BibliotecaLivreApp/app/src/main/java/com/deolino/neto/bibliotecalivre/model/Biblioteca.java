@@ -8,9 +8,9 @@ public class Biblioteca {
     private String nome;
     private String endereco;
     private int cidade;
+    private int codigo;
 
-    public Biblioteca() {
-    }
+    public Biblioteca() {}
 
     public Biblioteca(String nome, String endereco, int cidade) {
         this.nome = nome;
@@ -40,5 +40,13 @@ public class Biblioteca {
 
     public void setCidade(int cidade) {
         this.cidade = cidade;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
     }
 }

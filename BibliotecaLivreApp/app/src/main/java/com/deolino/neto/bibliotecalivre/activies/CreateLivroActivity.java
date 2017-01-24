@@ -52,7 +52,7 @@ public class CreateLivroActivity extends AppCompatActivity implements ServerResp
         livro.setISBN(editTextISBN.getText().toString());
         livro.setAutor(editTextAutor.getText().toString());
         livro.setCategoria(editTextCategoria.getText().toString());
-        livro.setBiblioteca();
+        //livro.setBiblioteca(0);
 
         serverRequest.post(ServerRequest.SAVE_LIVRO, livro);
     }

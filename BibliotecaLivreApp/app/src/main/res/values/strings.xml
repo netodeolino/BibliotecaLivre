@@ -28,6 +28,9 @@
     <string name="estado">Estado</string>
     <string name="description_cidade">Descrição da Cidade</string>
 
+    <!-- Biblioteca -->
+    <string name="description_biblioteca">Descrição da Biblioteca</string>
+
     <!-- Spinners -->
     <string-array name="states_array">
         <item>AC</item>

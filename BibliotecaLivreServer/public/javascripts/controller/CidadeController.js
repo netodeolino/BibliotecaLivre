@@ -25,12 +25,11 @@ exports.allCidadesByEstado = function (req, res, next) {
     });
 }
 
-/* Test */
 exports.saveCidade = function (req, res, next) {
 	new Cidade({
 		nome: req.body.nome,
-    	estado: req.body.estado,
-    	codigo: req.body.codigo
+		estado: req.body.estado,
+		codigo: req.body.codigo
 	}).save(function(err, cidade, count){
 		if (err) {
 			res.json({result: false, data: null});

@@ -118,7 +118,7 @@ public class CidadeDescriptionActivity extends AppCompatActivity implements Serv
 
                         c.setNome(mp.get("nome").toString());
                         c.setCodigo((int) Double.parseDouble(mp.get("codigo").toString()));
-                        c.setSiglaEstado(mp.get("estado").toString());
+                        c.setEstado(mp.get("estado").toString());
 
                         this.cidade = c;
                     }
@@ -163,7 +163,7 @@ public class CidadeDescriptionActivity extends AppCompatActivity implements Serv
         // AJEITAR A IMAGEM, ESTÁ UMA FIXA
         this.imageViewCidade.setImageResource(R.drawable.cidade_icon);
         this.textViewNome.setText(cidade.getNome());
-        this.textViewEstado.setText(cidade.getSiglaEstado());
+        this.textViewEstado.setText(cidade.getEstado());
 
         serverRequest.get(ServerRequest.FIND_BIBLIOTECA_BY_CIDADE, cidade.getCodigo());
     }

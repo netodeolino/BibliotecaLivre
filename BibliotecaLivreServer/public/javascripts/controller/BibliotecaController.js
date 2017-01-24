@@ -16,7 +16,8 @@ exports.saveBiblioteca = function (req, res, next) {
 	new Biblioteca({
 		nome: req.body.nome,
 		endereco: req.body.endereco,
-		cidadecod: req.body.cidade
+		cidadecod: req.body.cidade,
+		codigo: req.body.codigo
 	}).save(function(err, biblioteca, count){
 		if (err) {
 			res.json({result: false, data: null});

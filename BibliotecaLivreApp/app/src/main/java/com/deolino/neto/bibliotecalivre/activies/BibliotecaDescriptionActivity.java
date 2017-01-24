@@ -81,6 +81,7 @@ public class BibliotecaDescriptionActivity extends AppCompatActivity implements 
                         Biblioteca b = new Biblioteca();
 
                         b.setNome(mp.get("nome").toString());
+                        b.setCodigo((int) Double.parseDouble(mp.get("codigo").toString()));
 
                         this.biblioteca = b;
                     }
@@ -90,8 +91,18 @@ public class BibliotecaDescriptionActivity extends AppCompatActivity implements 
                     Log.e(Constants.LOG_TAG, "LOL--> " + e.toString());
                 }
             }
-        } else if () {
+        } else if (requestUrl.equals(ServerRequest.FIND_LIVRO_BY_BIBLIOTECA)) {
+            if (response.getResult()) {
+                ArrayList<LinkedTreeMap<String, Object>> data = (ArrayList<LinkedTreeMap<String, Object>>) response.getData();
+                try {
+                    for (LinkedTreeMap<String, Object> mp : data) {
 
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Log.e(Constants.LOG_TAG, "LOL--> " + e.toString());
+                }
+            }
         } else {
             Log.d(Constants.LOG_TEST, "REQUEST NÃO TRATADO AINDA :)");
         }
@@ -107,6 +118,6 @@ public class BibliotecaDescriptionActivity extends AppCompatActivity implements 
         this.imageViewBiblioteca.setImageResource(R.drawable.biblioteca_icon);
         this.textViewNome.setText(biblioteca.getNome());
 
-        serverRequest.get(ServerRequest.FIND_LIVRO);
+        serverRequest.get(ServerRequest.FIND_LIVRO_BY_BIBLIOTECA, biblioteca.getCodigo());
     }
 }

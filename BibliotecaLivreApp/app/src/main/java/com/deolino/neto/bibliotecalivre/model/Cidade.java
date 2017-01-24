@@ -9,14 +9,14 @@ import java.util.ArrayList;
 public class Cidade {
     private int codigo;
     private String nome;
-    private String siglaEstado;
+    private String estado;
 
     public Cidade () {}
 
-    public Cidade (int codigo, String nome, String siglaEstado) {
+    public Cidade (int codigo, String nome, String estado) {
         this.codigo = codigo;
         this.nome = nome;
-        this.siglaEstado = siglaEstado;
+        this.estado = estado;
     }
 
     public int getCodigo() {
@@ -35,11 +35,11 @@ public class Cidade {
         this.nome = nome;
     }
 
-    public String getSiglaEstado() {
-        return siglaEstado;
+    public String getEstado() {
+        return estado;
     }
 
-    public void setSiglaEstado(String siglaEstado) {
-        this.siglaEstado = siglaEstado;
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 }
