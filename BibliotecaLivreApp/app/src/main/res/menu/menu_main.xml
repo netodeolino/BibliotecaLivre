@@ -10,12 +10,6 @@
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/action_description_livro"
-        android:orderInCategory="100"
-        android:title="@string/action_description_livro"
-        app:showAsAction="never" />
-
-    <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"
