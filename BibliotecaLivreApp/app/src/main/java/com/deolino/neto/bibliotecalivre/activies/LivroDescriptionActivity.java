@@ -36,6 +36,10 @@ public class LivroDescriptionActivity extends AppCompatActivity implements Serve
 
     private Livro livro;
 
+    private String livroCod;
+
+    private Intent intent;
+
     private ServerRequest serverRequest;
 
     @Override
@@ -52,6 +56,10 @@ public class LivroDescriptionActivity extends AppCompatActivity implements Serve
 
         this.livro = new Livro();
         this.serverRequest = new ServerRequest(this, this);
+
+        // From BibliotecaDescription
+        this.intent = getIntent();
+        this.livroCod = intent.getStringExtra("livroCod");
 
         // PARA TEST DE TELA E AFINS DE DESCRIÇAO E ATUALIZAÇAO
         //serverRequest.get(ServerRequest.FIND_LIVRO_BY_NAME, "celular"); // para teste

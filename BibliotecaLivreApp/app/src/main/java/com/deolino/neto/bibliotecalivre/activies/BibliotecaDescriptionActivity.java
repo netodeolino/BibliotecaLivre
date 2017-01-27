@@ -42,9 +42,11 @@ public class BibliotecaDescriptionActivity extends AppCompatActivity implements 
 
     private Biblioteca biblioteca;
 
+    private ArrayList<Livro> livros = new ArrayList<Livro>();
+
     private int bibliotecaCod;
 
-    private ArrayList<Livro> livros = new ArrayList<Livro>();
+    private String livroCod;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +72,10 @@ public class BibliotecaDescriptionActivity extends AppCompatActivity implements 
                 Log.d(Constants.LOG_TEST, "Item " + position + " clicked");
 
                 // Implementar a Descrição do Livro
+                livroCod = livros.get(position).getISBN();
+                Intent intent = new Intent(context, LivroDescriptionActivity.class);
+                intent.putExtra("livroCod", livroCod);
+                startActivity(intent);
             }
         });
     }
