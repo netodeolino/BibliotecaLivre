@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.deolino.neto.bibliotecalivre.R;
 import com.deolino.neto.bibliotecalivre.adapters.LivroAdapter;
@@ -121,6 +122,9 @@ public class BibliotecaDescriptionActivity extends AppCompatActivity implements 
                     e.printStackTrace();
                     Log.e(Constants.LOG_TAG, "LOL--> " + e.toString());
                 }
+            }
+            else {
+                Toast.makeText(this, "Não foi possível realizar a operação!", Toast.LENGTH_LONG).show();
             }
         } else {
             Log.d(Constants.LOG_TEST, "REQUEST NÃO TRATADO AINDA :)");

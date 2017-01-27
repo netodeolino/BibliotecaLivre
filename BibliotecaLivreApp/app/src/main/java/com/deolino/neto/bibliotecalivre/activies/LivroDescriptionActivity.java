@@ -61,6 +61,8 @@ public class LivroDescriptionActivity extends AppCompatActivity implements Serve
         this.intent = getIntent();
         this.livroCod = intent.getStringExtra("livroCod");
 
+        serverRequest.get(ServerRequest.FIND_LIVRO_BY_ISBN, livroCod);
+
         // PARA TEST DE TELA E AFINS DE DESCRIÇAO E ATUALIZAÇAO
         //serverRequest.get(ServerRequest.FIND_LIVRO_BY_NAME, "celular"); // para teste
     }
@@ -94,6 +96,30 @@ public class LivroDescriptionActivity extends AppCompatActivity implements Serve
     @Override
     public void onSuccess(Response response, String requestUrl) {
         if (requestUrl.equals(ServerRequest.FIND_LIVRO_BY_NAME)) {
+            if (response.getResult()) {
+                ArrayList<LinkedTreeMap<String, Object>> data = (ArrayList<LinkedTreeMap<String, Object>>) response.getData();
+                try {
+                    for (LinkedTreeMap<String, Object> mp : data) {
+                        Livro liv = new Livro();
+
+                        liv.setNome(mp.get("nome").toString());
+                        liv.setAno((int) Double.parseDouble(mp.get("ano").toString()));
+                        liv.setISBN(mp.get("ISBN").toString());
+                        liv.setAutor(mp.get("autor").toString());
+                        liv.setCategoria(mp.get("categoria").toString());
+
+                        this.livro = liv;
+
+                        updateActivityDescription();
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Log.e(Constants.LOG_TAG, "LOL--> " + e.toString());
+                }
+            } else {
+                Toast.makeText(this, "Não foi possível realizar a operação!", Toast.LENGTH_LONG).show();
+            }
+        } else if (requestUrl.equals(ServerRequest.FIND_LIVRO_BY_ISBN)) {
             if (response.getResult()) {
                 ArrayList<LinkedTreeMap<String, Object>> data = (ArrayList<LinkedTreeMap<String, Object>>) response.getData();
                 try {

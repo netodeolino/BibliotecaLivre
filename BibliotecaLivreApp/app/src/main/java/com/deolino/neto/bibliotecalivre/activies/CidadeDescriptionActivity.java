@@ -149,6 +149,9 @@ public class CidadeDescriptionActivity extends AppCompatActivity implements Serv
                     Log.e(Constants.LOG_TAG, "LOL--> " + e.toString());
                 }
             }
+            else {
+                Toast.makeText(this, "Não foi possível realizar a operação!", Toast.LENGTH_LONG).show();
+            }
         } else {
             Log.d(Constants.LOG_TEST, "REQUEST NÃO TRATADO AINDA :)");
         }
