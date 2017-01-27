@@ -62,9 +62,6 @@ public class LivroDescriptionActivity extends AppCompatActivity implements Serve
         this.livroCod = intent.getStringExtra("livroCod");
 
         serverRequest.get(ServerRequest.FIND_LIVRO_BY_ISBN, livroCod);
-
-        // PARA TEST DE TELA E AFINS DE DESCRIÇAO E ATUALIZAÇAO
-        //serverRequest.get(ServerRequest.FIND_LIVRO_BY_NAME, "celular"); // para teste
     }
 
     @Override
@@ -87,6 +84,7 @@ public class LivroDescriptionActivity extends AppCompatActivity implements Serve
         }
         if (id == R.id.action_update_livro) {
             Intent intent = new Intent(this, UpdateLivroActivity.class);
+            intent.putExtra("livroCod", livroCod);
             startActivity(intent);
             return true;
         }

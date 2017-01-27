@@ -27,7 +27,6 @@ exports.saveLivro = function (req, res, next) {
 	});
 }
 
-/* Test */
 exports.findLivroByISBN = function (req, res, next) {
 	// body...
 	var isbn = req.params.ISBN;
