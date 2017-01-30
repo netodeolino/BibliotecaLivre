@@ -5,32 +5,24 @@ package com.deolino.neto.bibliotecalivre.model;
  */
 
 public class User {
-    private String first_name;
-    private String last_name;
+    private String nome;
     private String email;
+    private String senha;
 
     public User () {}
 
-    public User (String first_name, String last_name, String email){
-        this.first_name = first_name;
-        this.last_name = last_name;
+    public User (String nome, String email, String senha){
+        this.nome = nome;
         this.email = email;
+        this.senha = senha;
     }
 
-    public String getFirst_name() {
-        return first_name;
+    public String getNome() {
+        return nome;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
-    }
-
-    public String getLast_name() {
-        return last_name;
-    }
-
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getEmail() {
@@ -39,5 +31,13 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 }

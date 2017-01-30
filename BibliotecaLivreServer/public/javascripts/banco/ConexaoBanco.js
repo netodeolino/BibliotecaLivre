@@ -5,9 +5,9 @@ mongoose.Promise = global.Promise;
 var Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
-    first_name: String,
-    last_name: String,
-    email: String
+    nome: String,
+    email: String,
+    senha: String
 }, {
 	versionKey: false // You should be aware of the outcome after set to false
 });

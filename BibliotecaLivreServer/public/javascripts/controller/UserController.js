@@ -10,9 +10,9 @@ exports.allUsers = function (req, res, next) {
 
 exports.saveUser = function (req, res, next) {
 	new User({
-		first_name: req.body.first_name,
-    	last_name: req.body.last_name,
-    	email: req.body.email
+		nome: req.body.nome,
+    	email: req.body.email,
+    	senha: req.body.senha
 	}).save(function(err, user, count){
 		res.redirect('/');
 	});
