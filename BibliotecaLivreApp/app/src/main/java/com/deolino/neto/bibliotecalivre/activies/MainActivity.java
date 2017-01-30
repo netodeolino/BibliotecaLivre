@@ -150,6 +150,8 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
 
         request.post(ServerRequest.SAVE_LIVRO, l);
         */
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
 
     @Override

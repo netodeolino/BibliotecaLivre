@@ -66,6 +66,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activies.MainActivity" />
         </activity>
+
+        <activity
+            android:name=".activies.LoginActivity"
+            android:label="@string/description_biblioteca"
+            android:parentActivityName=".activies.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activies.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

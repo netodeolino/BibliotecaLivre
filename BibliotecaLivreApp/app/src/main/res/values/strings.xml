@@ -38,6 +38,7 @@
     <string name="reset_password">Recuperar Senha</string>
     <string name="create_account">Criar Conta</string>
     <string name="forgot_password">Esqueceu sua Senha?</string>
+    <string name="error_empty_fields">Por favor, preencha todos os campos!</string>
 
     <!-- Spinners -->
     <string-array name="states_array">
