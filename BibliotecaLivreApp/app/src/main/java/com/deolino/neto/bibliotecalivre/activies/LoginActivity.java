@@ -44,6 +44,8 @@ public class LoginActivity extends AppCompatActivity implements ServerResponseLi
     }
 
     public void loginButtonClicked(View view) {
+        pbLogin.setVisibility(View.VISIBLE);
+
         String mail = editTextEmail.getText().toString();
         String password = editTextSenha.getText().toString();
 

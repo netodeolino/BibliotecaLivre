@@ -69,7 +69,7 @@
 
         <activity
             android:name=".activies.LoginActivity"
-            android:label="@string/description_biblioteca"
+            android:label="@string/log_in"
             android:parentActivityName=".activies.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
