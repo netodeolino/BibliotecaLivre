@@ -1,6 +1,9 @@
 package com.deolino.neto.bibliotecalivre.activies;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -34,10 +37,18 @@ public class LoginActivity extends AppCompatActivity implements ServerResponseLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        this.pbLogin = (ProgressBar) findViewById(R.id.pbLogin);
-        this.editTextEmail = (EditText) findViewById(R.id.etMail);
-        this.editTextSenha = (EditText) findViewById(R.id.etPassword);
-        this.pbLogin.setVisibility(View.GONE);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        String pass = prefs.getString("user_pass", "null");
+
+        if (pass.equals("null")) {
+            this.pbLogin = (ProgressBar) findViewById(R.id.pbLogin);
+            this.editTextEmail = (EditText) findViewById(R.id.etMail);
+            this.editTextSenha = (EditText) findViewById(R.id.etPassword);
+            this.pbLogin.setVisibility(View.GONE);
+        } else {
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            finish();
+        }
     }
 
     @Override
@@ -89,6 +100,12 @@ public class LoginActivity extends AppCompatActivity implements ServerResponseLi
     }
 
     private void login() {
-        
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("user_pass", user.getSenha());
+        editor.apply();
+
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        finish();
     }
 }
