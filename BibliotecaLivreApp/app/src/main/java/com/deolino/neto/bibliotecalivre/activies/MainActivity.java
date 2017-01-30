@@ -35,17 +35,11 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity implements ServerResponseListener, AdapterView.OnItemSelectedListener {
 
     private Livro livrao;
-
     private ArrayList<Cidade> cidades = new ArrayList<Cidade>();
-
     private ServerRequest request;
-
     private Spinner spinner1;
-
     private ListView cidadesLista;
-
     private Context context;
-
     private int cidadeCodigo;
 
     @Override

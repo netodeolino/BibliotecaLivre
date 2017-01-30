@@ -16,8 +16,6 @@ public class ServerRequest {
 
     private static final String SERVER = "http://192.168.0.112:3000/";
 
-    public static final String LOGIN = "login";
-
     /* LIVRO */
     public static final String FIND_LIVRO_BY_NAME = "findlivrobyname/";
     public static final String FIND_LIVRO_BY_ISBN = "findlivrobyisbn/";
@@ -35,6 +33,9 @@ public class ServerRequest {
     /* BIBLIOTECA */
     public static final String SAVE_BIBLIOTECA = "savebiblioteca";
     public static final String FIND_BIBLIOTECA_BY_CIDADE = "findbibliotecabycidade/";
+
+    /* USUÁRIO */
+    public static final String LOGIN_USER = "login_user/";
 
 
     private OptimusHTTP client;
