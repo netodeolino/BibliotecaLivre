@@ -10,9 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="125b1f68-3d18-4265-b741-5d10fbbc44c6" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
     </list>
     <ignored path="BibliotecaLivreApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,14 +59,18 @@
       <file leaf-file-name="activity_login.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="10" column="28" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="28" />
+            <state relative-caret-position="-561">
+              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
               <folding>
-                <element signature="e#865#879#0" expanded="true" />
-                <element signature="e#1226#1241#0" expanded="true" />
-                <element signature="e#1418#1434#0" expanded="true" />
-                <element signature="e#1742#1766#0" expanded="true" />
-                <element signature="e#2113#2138#0" expanded="true" />
+                <element signature="e#501#534#0" expanded="true" />
+                <element signature="e#563#598#0" expanded="true" />
+                <element signature="e#628#663#0" expanded="true" />
+                <element signature="e#691#724#0" expanded="true" />
+                <element signature="e#1119#1133#0" expanded="true" />
+                <element signature="e#1480#1495#0" expanded="true" />
+                <element signature="e#1672#1688#0" expanded="true" />
+                <element signature="e#1996#2020#0" expanded="true" />
+                <element signature="e#2367#2392#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2582,7 +2585,7 @@
         <state relative-caret-position="2193">
           <caret line="153" column="13" selection-start-line="153" selection-start-column="13" selection-end-line="153" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2743,14 +2746,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="10" column="28" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="28" />
+        <state relative-caret-position="-561">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
           <folding>
-            <element signature="e#865#879#0" expanded="true" />
-            <element signature="e#1226#1241#0" expanded="true" />
-            <element signature="e#1418#1434#0" expanded="true" />
-            <element signature="e#1742#1766#0" expanded="true" />
-            <element signature="e#2113#2138#0" expanded="true" />
+            <element signature="e#501#534#0" expanded="true" />
+            <element signature="e#563#598#0" expanded="true" />
+            <element signature="e#628#663#0" expanded="true" />
+            <element signature="e#691#724#0" expanded="true" />
+            <element signature="e#1119#1133#0" expanded="true" />
+            <element signature="e#1480#1495#0" expanded="true" />
+            <element signature="e#1672#1688#0" expanded="true" />
+            <element signature="e#1996#2020#0" expanded="true" />
+            <element signature="e#2367#2392#0" expanded="true" />
           </folding>
         </state>
       </provider>
