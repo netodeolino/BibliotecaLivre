@@ -17,3 +17,7 @@ exports.saveUser = function (req, res, next) {
 		res.redirect('/');
 	});
 }
+
+exports.loginUser = function (req, res, next) {
+	
+}
