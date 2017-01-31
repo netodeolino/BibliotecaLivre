@@ -97,7 +97,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="a9992c808b7990ec2b04e99a560345b7f81f0bfe">
+        sha1="9dc96a8b39c6e4e2d2894763a20bb9184af4afe0">
         <dex dex="/home/neto/GitHub/Express/BibliotecaLivre/BibliotecaLivreApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_fcc326c0077adb004faf734d963e0acc1020dc54/classes.dex" />
     </item>
     <item

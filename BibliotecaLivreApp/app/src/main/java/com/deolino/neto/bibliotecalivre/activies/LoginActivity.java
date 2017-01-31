@@ -72,6 +72,9 @@ public class LoginActivity extends AppCompatActivity implements ServerResponseLi
                 } catch (Exception e) {
                     e.printStackTrace();
                     Log.e(Constants.LOG_TAG, "LOL--> " + e.toString());
+
+                    Toast.makeText(this, getString(R.string.error_incorrect_data_login), Toast.LENGTH_LONG).show();
+                    pbLogin.setVisibility(View.GONE);
                 }
             } else {
                 Toast.makeText(this, "Não foi possível realizar a operação!", Toast.LENGTH_LONG).show();
@@ -98,6 +101,7 @@ public class LoginActivity extends AppCompatActivity implements ServerResponseLi
         temp.setSenha(password);
 
         if (mail.isEmpty() || password.isEmpty()) {
+            pbLogin.setVisibility(View.GONE);
             Toast.makeText(LoginActivity.this, getString(R.string.error_empty_fields), Toast.LENGTH_LONG).show();
         } else {
             request.post(ServerRequest.LOGIN_USER, temp);
