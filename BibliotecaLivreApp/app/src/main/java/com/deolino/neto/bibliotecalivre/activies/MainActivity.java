@@ -2,7 +2,9 @@ package com.deolino.neto.bibliotecalivre.activies;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.CheckableImageButton;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -103,6 +105,17 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
         if (id == R.id.action_create_livro) {
             Intent intent = new Intent(this, CreateLivroActivity.class);
             startActivity(intent);
+            finish();
+            return true;
+        }
+        if (id == R.id.action_logout) {
+            SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(this).edit();
+            editor.remove("user_pass");
+            editor.apply();
+
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            finish();
             return true;
         }
 
@@ -145,14 +158,16 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
         request.post(ServerRequest.SAVE_LIVRO, l);
         */
 
+        /*
         User novo = new User();
         novo.setNome("Neto Deolino");
         novo.setEmail("netodeolino@email.com");
         novo.setSenha("123");
         request.post(ServerRequest.SAVE_USER, novo);
+        */
 
-        //Intent intent = new Intent(this, LoginActivity.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
 
     @Override

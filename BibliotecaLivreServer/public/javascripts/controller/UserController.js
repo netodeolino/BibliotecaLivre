@@ -8,7 +8,6 @@ exports.allUsers = function (req, res, next) {
     });
 }
 
-/* Test */
 exports.saveUser = function (req, res, next) {
 	new User({
 		nome: req.body.nome,
@@ -23,7 +22,6 @@ exports.saveUser = function (req, res, next) {
 	});
 }
 
-/* Test */
 exports.loginUser = function (req, res, next) {
 	// body...
 	var mail = req.body.email;
