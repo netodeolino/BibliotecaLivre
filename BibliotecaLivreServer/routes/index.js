@@ -11,8 +11,13 @@ router.get('/', function(req, res, next) {
 	res.render('index', { title: 'Biblioteca Livre' });
 });
 
-router.get('/users', UserController.allUsers);
+
+/* User POST */
 router.post('/saveuser', UserController.saveUser);
+router.post('/loginuser', UserController.loginUser);
+
+/* User GET */
+router.get('/users', UserController.allUsers);
 
 
 /* Livro POST */

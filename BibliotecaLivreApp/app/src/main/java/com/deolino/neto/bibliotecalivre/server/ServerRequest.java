@@ -35,7 +35,7 @@ public class ServerRequest {
     public static final String FIND_BIBLIOTECA_BY_CIDADE = "findbibliotecabycidade/";
 
     /* USUÁRIO */
-    public static final String LOGIN_USER = "login_user/";
+    public static final String LOGIN_USER = "loginuser/";
 
 
     private OptimusHTTP client;
