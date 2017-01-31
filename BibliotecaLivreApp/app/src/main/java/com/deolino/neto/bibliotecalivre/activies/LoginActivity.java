@@ -40,6 +40,8 @@ public class LoginActivity extends AppCompatActivity implements ServerResponseLi
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         String pass = prefs.getString("user_pass", "null");
 
+        this.request = new ServerRequest(this, this);
+
         if (pass.equals("null")) {
             this.pbLogin = (ProgressBar) findViewById(R.id.pbLogin);
             this.editTextEmail = (EditText) findViewById(R.id.etMail);
@@ -84,13 +86,14 @@ public class LoginActivity extends AppCompatActivity implements ServerResponseLi
 
     }
 
-    private void loginButtonClicked(View view) {
+    public void loginButtonClicked(View view) {
         pbLogin.setVisibility(View.VISIBLE);
 
         String mail = editTextEmail.getText().toString();
         String password = editTextSenha.getText().toString();
 
         User temp = new User();
+        temp.setNome("");
         temp.setEmail(mail);
         temp.setSenha(password);
 

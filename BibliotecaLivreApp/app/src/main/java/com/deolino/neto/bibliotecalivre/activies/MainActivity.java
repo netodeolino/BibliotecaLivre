@@ -144,8 +144,15 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
 
         request.post(ServerRequest.SAVE_LIVRO, l);
         */
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
+
+        User novo = new User();
+        novo.setNome("Neto Deolino");
+        novo.setEmail("netodeolino@email.com");
+        novo.setSenha("123");
+        request.post(ServerRequest.SAVE_USER, novo);
+
+        //Intent intent = new Intent(this, LoginActivity.class);
+        //startActivity(intent);
     }
 
     @Override

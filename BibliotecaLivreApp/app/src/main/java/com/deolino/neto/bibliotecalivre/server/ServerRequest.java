@@ -36,6 +36,7 @@ public class ServerRequest {
 
     /* USUÁRIO */
     public static final String LOGIN_USER = "loginuser/";
+    public static final String SAVE_USER = "saveuser";
 
 
     private OptimusHTTP client;
