@@ -2,12 +2,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.deolino.neto.bibliotecalivre.activies.MainActivity">
-    <item
-        android:id="@+id/action_create_livro"
-        android:orderInCategory="100"
-        android:title="@string/action_create_livro"
-        android:icon="@drawable/add_livro"
-        app:showAsAction="always" />
 
     <item
         android:id="@+id/action_logout"

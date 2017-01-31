@@ -117,4 +117,12 @@ public class LoginActivity extends AppCompatActivity implements ServerResponseLi
         startActivity(new Intent(getApplicationContext(), MainActivity.class));
         finish();
     }
+
+    public void createAccount(View view) {
+        startActivity(new Intent(this, CreateAccountActivity.class));
+    }
+
+    public void resetPassword(View view) {
+        startActivity(new Intent(this, ResetPasswordActivity.class));
+    }
 }

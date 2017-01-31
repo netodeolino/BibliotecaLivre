@@ -102,12 +102,6 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
         if (id == R.id.action_settings) {
             return true;
         }
-        if (id == R.id.action_create_livro) {
-            Intent intent = new Intent(this, CreateLivroActivity.class);
-            startActivity(intent);
-            finish();
-            return true;
-        }
         if (id == R.id.action_logout) {
             SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(this).edit();
             editor.remove("user_pass");
