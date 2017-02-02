@@ -21,7 +21,7 @@ router.get('/users', UserController.allUsers);
 
 
 /* Livro POST */
-router.post('/savelivro', LivroController.saveLivro);
+router.post('/savelivro', LivroController.saveLivro); // Update Web
 router.post('/updatelivrobyisbn', LivroController.updateLivroByISBN);
 
 /* Livro GET */
