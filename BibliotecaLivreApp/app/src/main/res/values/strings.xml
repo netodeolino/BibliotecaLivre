@@ -43,11 +43,13 @@
     <string name="error_incorrect_data_login">Dados incorretos!</string>
 
     <!-- Create Account -->
-    <string name="introduce_login">Introduce chosen login</string>
-    <string name="introduce_mail">Introduce chosen mail</string>
-    <string name="introduce_mail_reset_password">Introduce your mail</string>
-    <string name="new_password">New password</string>
-    <string name="tv_repeat_password">Repeat password</string>
+    <string name="introduce_name_a">Digite o seu nome</string>
+    <string name="introduce_login">Digite o seu login</string>
+    <string name="introduce_mail">Digite o seu email</string>
+    <string name="introduce_mail_reset_password">Digite o seu email</string>
+    <string name="new_password">Nova senha</string>
+    <string name="tv_repeat_password">Repita a senha</string>
+    <string name="repeat_password">Repita sua senha</string>
 
     <!-- Spinners -->
     <string-array name="states_array">
