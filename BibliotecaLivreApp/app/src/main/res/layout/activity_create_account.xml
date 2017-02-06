@@ -15,10 +15,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/name"
+            android:text="@string/nome"
             android:id="@+id/tvCreateName"
             android:layout_marginTop="26dp"
-            style="@style/tvSettings"/>
+            style="@style/tvNome"/>
 
         <EditText
             android:layout_width="match_parent"
@@ -28,7 +28,7 @@
             android:ems="10"
             android:id="@+id/etCreateName"
             android:textAlignment="center"
-            style="@style/etSettings"/>
+            style="@style/etNome"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -37,7 +37,7 @@
             android:text="@string/mail"
             android:id="@+id/tvCreateMail"
             android:layout_marginTop="26dp"
-            style="@style/tvSettings"/>
+            style="@style/tvNome"/>
 
         <EditText
             android:layout_width="match_parent"
@@ -47,16 +47,16 @@
             android:ems="10"
             android:id="@+id/etCreateMail"
             android:textAlignment="center"
-            style="@style/etSettings"/>
+            style="@style/etNome"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/password"
+            android:text="@string/senha"
             android:id="@+id/tvCreatePassword"
             android:layout_marginTop="29dp"
-            style="@style/tvSettings"/>
+            style="@style/tvNome"/>
 
         <EditText
             android:layout_width="match_parent"
@@ -66,7 +66,7 @@
             android:ems="10"
             android:id="@+id/etCreatePassword"
             android:textAlignment="center"
-            style="@style/etSettings"/>
+            style="@style/etNome"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -75,7 +75,7 @@
             android:text="@string/tv_repeat_password"
             android:id="@+id/tvRepeatPassword"
             android:layout_marginTop="29dp"
-            style="@style/tvSettings"/>
+            style="@style/tvNome"/>
 
         <EditText
             android:layout_width="match_parent"
@@ -85,7 +85,7 @@
             android:ems="10"
             android:id="@+id/etRepeatPassword"
             android:textAlignment="center"
-            style="@style/etSettings"/>
+            style="@style/etNome"/>
 
         <Button
             android:layout_width="match_parent"
