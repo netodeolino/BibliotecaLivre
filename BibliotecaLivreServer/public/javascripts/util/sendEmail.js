@@ -18,8 +18,7 @@ exports.sendEmail = function (req, res, next) {
     // setup email data with unicode symbols
     let mailOptions = {
         from: '"Biblioteca Livre" <netofalso2@gmail.com>', // sender address
-        to: email,
-        //to: 'netodeolino@outlook.com', // list of receivers
+        to: email, // list of receivers
         subject: 'Nova senha Biblioteca Livre', // Subject line
         text: 'Sua nova senha é: ' + randomstring, // plain text body
         html: 'Sua nova senha é: ' + randomstring // html body
