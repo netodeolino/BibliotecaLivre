@@ -160,8 +160,11 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
         request.post(ServerRequest.SAVE_USER, novo);
         */
 
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
+        //Intent intent = new Intent(this, LoginActivity.class);
+        //startActivity(intent);
+
+        String email = "netodeolino@outlook.com";
+        request.post("email", email);
     }
 
     @Override

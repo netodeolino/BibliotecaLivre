@@ -5,6 +5,9 @@ var UserController = require('../public/javascripts/controller/UserController');
 var LivroController = require('../public/javascripts/controller/LivroController');
 var CidadeController = require('../public/javascripts/controller/CidadeController');
 var BibliotecaController = require('../public/javascripts/controller/BibliotecaController');
+var EmailUtil = require('../public/javascripts/util/sendEmail');
+
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -51,5 +54,7 @@ router.post('/savebiblioteca', BibliotecaController.saveBiblioteca);
 /* Biblioteca GET */
 router.get('/findbibliotecabycidade/:cidadecod', BibliotecaController.findBibliotecaByCidade);
 
+/* Email POST */
+router.post('/email', EmailUtil.sendEmail);
 
 module.exports = router;

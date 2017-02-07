@@ -46,7 +46,7 @@ public class ResetPasswordActivity extends AppCompatActivity implements ServerRe
         if (email.isEmpty()) {
             Toast.makeText(ResetPasswordActivity.this, getString(R.string.error_empty_fields), Toast.LENGTH_LONG).show();
         } else {
-            
+
         }
     }
 }
