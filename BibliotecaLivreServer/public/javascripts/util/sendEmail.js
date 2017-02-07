@@ -22,7 +22,7 @@ exports.sendEmail = function (req, res, next) {
         //to: 'netodeolino@outlook.com', // list of receivers
         subject: 'Nova senha Biblioteca Livre', // Subject line
         text: 'Sua nova senha é: ' + randomstring, // plain text body
-        html: '<b>Hello world ?</b>' // html body
+        html: 'Sua nova senha é: ' + randomstring // html body
     };
 
     // send mail with defined transport object
