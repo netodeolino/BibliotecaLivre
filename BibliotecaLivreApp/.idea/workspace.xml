@@ -10,10 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="125b1f68-3d18-4265-b741-5d10fbbc44c6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/activies/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/activies/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/activies/ResetPasswordActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/activies/ResetPasswordActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/server/ServerRequest.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/server/ServerRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
     </list>
     <ignored path="BibliotecaLivreApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,21 +43,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/activies/LoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
+            <state relative-caret-position="250">
               <caret line="78" column="13" selection-start-line="78" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResetPasswordActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/activies/ResetPasswordActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="42" column="73" selection-start-line="42" selection-start-column="73" selection-end-line="42" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -1855,13 +1842,13 @@
         <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/activies/LoginActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/activies/CreateAccountActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_reset_password.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_create_account.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/activies/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/server/ServerRequest.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/activies/ResetPasswordActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -1905,52 +1892,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="BibliotecaLivreApp" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BibliotecaLivreApp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BibliotecaLivreApp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BibliotecaLivreApp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2653,17 +2594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="68" column="49" selection-start-line="68" selection-start-column="49" selection-end-line="68" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_create_account.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -2705,14 +2635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/activies/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="78" column="13" selection-start-line="78" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/activies/CreateAccountActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -2731,10 +2653,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="77" column="49" selection-start-line="77" selection-start-column="49" selection-end-line="77" selection-end-column="49" />
+          <folding>
+            <element signature="e#2723#2747#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/activies/ResetPasswordActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
+        <state relative-caret-position="403">
           <caret line="42" column="73" selection-start-line="42" selection-start-column="73" selection-end-line="42" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/deolino/neto/bibliotecalivre/activies/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="78" column="13" selection-start-line="78" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
           <folding />
         </state>
       </provider>
