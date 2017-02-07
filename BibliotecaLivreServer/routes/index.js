@@ -54,7 +54,7 @@ router.post('/savebiblioteca', BibliotecaController.saveBiblioteca);
 /* Biblioteca GET */
 router.get('/findbibliotecabycidade/:cidadecod', BibliotecaController.findBibliotecaByCidade);
 
-/* Email POST */
-router.post('/email', EmailUtil.sendEmail);
+/* Email GET */
+router.get('/email/:email', EmailUtil.sendEmail);
 
 module.exports = router;

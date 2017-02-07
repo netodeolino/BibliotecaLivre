@@ -164,7 +164,7 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
         //startActivity(intent);
 
         String email = "netodeolino@outlook.com";
-        request.post("email", email);
+        request.get("email/", email);
     }
 
     @Override
