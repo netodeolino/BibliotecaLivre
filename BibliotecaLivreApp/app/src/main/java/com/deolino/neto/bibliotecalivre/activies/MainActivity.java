@@ -163,8 +163,8 @@ public class MainActivity extends AppCompatActivity implements ServerResponseLis
         //Intent intent = new Intent(this, LoginActivity.class);
         //startActivity(intent);
 
-        String email = "netodeolino@outlook.com";
-        request.get("email/", email);
+        //String email = "netodeolino@outlook.com";
+        //request.get("email/", email);
     }
 
     @Override

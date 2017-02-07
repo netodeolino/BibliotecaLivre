@@ -38,6 +38,8 @@ public class ServerRequest {
     public static final String LOGIN_USER = "loginuser/";
     public static final String SAVE_USER = "saveuser";
 
+    /* RESET PASSWORD */
+    public static final String RESET_PASSWORD = "email/";
 
     private OptimusHTTP client;
     private ServerResponseListener listener;

@@ -37,6 +37,7 @@
     <string name="log_in">Log in</string>
     <string name="senha">Senha</string>
     <string name="reset_password">Recuperar Senha</string>
+    <string name="reset_password_ok">Senha Recuperada, Verifique seu email!</string>
     <string name="create_account">Criar Conta</string>
     <string name="forgot_password">Esqueceu sua Senha?</string>
     <string name="error_empty_fields">Por favor, preencha todos os campos!</string>
