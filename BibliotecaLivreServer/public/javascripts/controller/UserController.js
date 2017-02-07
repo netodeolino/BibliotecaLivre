@@ -34,3 +34,13 @@ exports.loginUser = function (req, res, next) {
 		res.json({result: true, data: user});
 	});
 }
+
+exports.updateUserByEmail = function (email, senha, callback) {
+	// body...
+	User.update({email: email}, {$set: {senha: senha}}, function (err, user, count) {
+		if (err) {
+			callback(false);
+		}
+		callback(true);
+	});
+}
