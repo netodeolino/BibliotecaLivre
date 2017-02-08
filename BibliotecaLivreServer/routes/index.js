@@ -13,7 +13,6 @@ router.get('/', function(req, res, next) {
 	res.render('index', { title: 'Biblioteca Livre' });
 });
 
-
 /* User POST */
 router.post('/saveuser', UserController.saveUser);
 router.post('/loginuser', UserController.loginUser);
