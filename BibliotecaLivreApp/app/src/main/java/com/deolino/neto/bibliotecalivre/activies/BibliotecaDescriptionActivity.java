@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -34,6 +35,7 @@ public class BibliotecaDescriptionActivity extends AppCompatActivity implements 
     private ImageView imageViewBiblioteca;
 
     private ListView listViewLivros;
+    private GridView gridViewLivros;
 
     private Context context;
 
@@ -56,7 +58,8 @@ public class BibliotecaDescriptionActivity extends AppCompatActivity implements 
 
         this.imageViewBiblioteca = (ImageView) findViewById(R.id.ivBibliotecaImage);
         this.textViewNome = (TextView) findViewById(R.id.tvBibliotecaNome);
-        this.listViewLivros = (ListView) findViewById(R.id.lvLivros);
+        //this.listViewLivros = (ListView) findViewById(R.id.lvLivros);
+        this.gridViewLivros = (GridView) findViewById(R.id.gvLivros);
 
         this.serverRequest = new ServerRequest(this, this);
         this.context = this;
@@ -67,7 +70,7 @@ public class BibliotecaDescriptionActivity extends AppCompatActivity implements 
 
         serverRequest.get(ServerRequest.FIND_BIBLIOTECA_BY_CIDADE, bibliotecaCod);
 
-        this.listViewLivros.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        this.gridViewLivros.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Log.d(Constants.LOG_TEST, "Item " + position + " clicked");
@@ -148,6 +151,6 @@ public class BibliotecaDescriptionActivity extends AppCompatActivity implements 
         Log.d(Constants.LOG_TEST, this.livros.size()+"");
 
         LivroAdapter livroAdapter = new LivroAdapter(getApplicationContext(), this.livros);
-        this.listViewLivros.setAdapter(livroAdapter);
+        this.gridViewLivros.setAdapter(livroAdapter);
     }
 }
