@@ -1,8 +1,40 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+	color: #00B7FF;
+	text-decoration: none;
 }
+
+.primary-footer { overflow: hidden; margin:0 auto; }
+.footer-wrap { background: #337ab7; overflow: hidden; padding-top: 2px; margin-top: 5px; padding-bottom: 2px; }
+.footer { margin:0 auto; }
+.footer .panel { float: left; background: none; width: 150px; }
+.footer .panel .title h1 { color: #ffffff; }
+.footer .panel .content { padding-top: 15px; }
+.footer .panel .content p { color: #435059; }
+.footer .panel .content .button a { margin-top: 5px; background: #d13f31; width: 70px; height: 10px; }
+.footer .panel .content .button a:hover { margin-top: 5px; background: #1f7872; }
+.footer .panel .content ul li{ list-style: url(../images/arrow.png) inside; border-bottom: #273042 solid 1px; line-height: 25px; }
+.footer .panel .content ul li a { text-decoration: none; color: #435059; }
+.footer .panel .content ul li a:hover { color: #d13f31; }
+.footer .panel .content ul li.-no-border-bottom { border-bottom: none; }
+
+.social{ float: right; margin-top: 17px; }
+.social ul li{ list-style: none; float: left; margin-left: 15px; }
+.social a { height: 32px; width: 32px; border-radius: 3px; display: block; text-indent: -9999px; }
+
+.logo { width: 150px; float: left; line-height: 60px; }
+.logo h1 { font-size: 30px; color: black; font-weight: normal; }
+.logo h1 span { color: #1a202c; }
+
+.brando h1 { font-size: 28px; }
+
+.nav-letras ul li a { font-size: 18px; margin-top: 6px; }
+.nav-letras ul li button { font-size: 18px; margin-top: 9px; }
+.nav-letras div form { margin-top: 15px; }
+
+.fotocontato img { float: left; display: block; margin: 0 auto; position: absolute; }
+
+.texto {font-size: 15px; text-decoration: none; text-align: inherit; text-indent: pt; color: black;}
