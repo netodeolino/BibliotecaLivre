@@ -39,7 +39,7 @@ app.use(function(req, res, next){
 });
 
 app.use('/', index);
-app.use('/web', web)
+app.use('/web', web);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
