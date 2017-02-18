@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+    </head>
+    <body>
+        <%- include include/header.ejs%>
+        <div class="container">
+        <div class="row">
+            <form role="form" action="/conta/<%= dados[0].id %>" method="post" >
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="InputName">Nome Completo</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="nome" id="nome" required value="<%= dados[0].nome %>">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="InputEmail">Seu Email</label>
+                        <div class="input-group">
+                            <input type="email" class="form-control" id="email" name="email" required value="<%= dados[0].email %>">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="InputLogin">Seu Login</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="login" name="login" required value="<%= dados[0].login %>">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="InputSenha">Sua Senha</label>
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="senha" name="senha" required value="<%= dados[0].senha %>">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+                        </div>
+                    </div>
+                    <input type="submit" name="submit" value="Atualizar" class="btn btn-lg btn-primary btn-block">
+                    <input type="button" name="cancel" value="Cancelar" class="btn btn-lg btn-primary btn-block" onclick="cancelarCadastro()">
+                </div>
+            </form>
+            <div class="col-md-6">
+                <p><strong>Deseja excluir sua conta?</strong></p>
+                <p>Uma vez excluído seus dados, os mesmos não poderão mais serem recuperados!</p>
+                <a class="btn btn-danger btn-lg btn-block" href="/conta/delete/<%= dados[0].id %>">Deletar Conta</a>
+            </div>
+        </div>
+        </div>
+        <%- include include/footer.ejs%>
+    </body>
+</html>

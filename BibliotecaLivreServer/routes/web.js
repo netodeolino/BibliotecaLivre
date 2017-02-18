@@ -10,6 +10,8 @@ router.get('/', function(req, res, next) {
 
 router.get('/about', RedirectPage.aboutPage);
 router.get('/contact', RedirectPage.contactPage);
+
+
 /* POST */
 
 
