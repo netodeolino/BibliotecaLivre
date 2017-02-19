@@ -44,3 +44,21 @@ exports.updateUserByEmail = function (email, senha, callback) {
 		callback(true);
 	});
 }
+
+exports.realizarLoginWeb = function (req, res, next){
+	// body...
+	var input = JSON.parse(JSON.stringify(req.body));
+
+	var login = input.Login;
+	var pass = input.Senha;
+
+	User.find({email: login, senha: pass}, function (err, user) {
+		if (err) {
+			console.log(err);
+			//res.json({result: false, data: null});
+		}
+		req.session.emailUser = user[0].email;
+		res.redirect('/web');
+		//res.json({result: true, data: user});
+	});
+}
