@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var RedirectPage = require('./RedirectPage');
-var UserController = require('../public/javascripts/controller/UserController');
+var UserController = require('../public/javascripts/controller/web/UserController');
 
 /* GET */
 router.get('/', function(req, res, next) {
@@ -14,6 +14,6 @@ router.get('/contact', RedirectPage.contactPage);
 
 
 /* POST */
-router.post('/login', UserController.realizarLoginWeb);
+router.post('/login', UserController.realizarLogin);
 
 module.exports = router;

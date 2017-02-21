@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
-var UserController = require('../public/javascripts/controller/UserController');
-var LivroController = require('../public/javascripts/controller/LivroController');
-var CidadeController = require('../public/javascripts/controller/CidadeController');
-var BibliotecaController = require('../public/javascripts/controller/BibliotecaController');
+var UserController = require('../public/javascripts/controller/app/UserController');
+var LivroController = require('../public/javascripts/controller/app/LivroController');
+var CidadeController = require('../public/javascripts/controller/app/CidadeController');
+var BibliotecaController = require('../public/javascripts/controller/app/BibliotecaController');
 var EmailUtil = require('../public/javascripts/util/SendEmail');
 
 
