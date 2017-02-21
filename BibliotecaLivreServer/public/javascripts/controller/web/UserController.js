@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var User = mongoose.model('User');
 
 
-exports.realizarLogin = function (req, res, next){
+exports.realizarLogin = function (req, res, next) {
 	// body...
 	var input = JSON.parse(JSON.stringify(req.body));
 
@@ -17,5 +17,17 @@ exports.realizarLogin = function (req, res, next){
 		req.session.emailUser = user[0].email;
 		res.redirect('/web');
 		//res.json({result: true, data: user});
+	});
+}
+
+exports.contaSettings = function (req, res, next) {
+	// body...
+	var mail = req.params.email;
+
+	User.find({email: mail}, function (err, user) {
+		if (err) {
+			console.log(err);
+		}
+		res.render('settings', {title: 'Conta', dados: user});
 	});
 }

@@ -8,6 +8,7 @@ var UserController = require('../public/javascripts/controller/web/UserControlle
 router.get('/', RedirectPage.homePage);
 router.get('/about', RedirectPage.aboutPage);
 router.get('/contact', RedirectPage.contactPage);
+router.get('/conta/:email', UserController.contaSettings);
 
 
 /* POST */
