@@ -9,6 +9,7 @@ router.get('/', RedirectPage.homePage);
 router.get('/about', RedirectPage.aboutPage);
 router.get('/contact', RedirectPage.contactPage);
 router.get('/conta/:email', UserController.contaSettings);
+router.get('/logout', UserController.realizarLogout);
 
 
 /* POST */

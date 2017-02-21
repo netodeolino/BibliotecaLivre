@@ -41,7 +41,9 @@
 	            </li>
 	          <% } else { %>
 	          	<li>
-	          		<button type="submit" class="btn btn-default" onclick="logoutUsuario()">Log Out</button>
+	          	<form action="/web/logout" method="get">
+	          		<button type="submit" class="btn btn-default">Log Out</button>
+	          	</form>
 	          	</li>
 	          <% } %>
 	          </ul>

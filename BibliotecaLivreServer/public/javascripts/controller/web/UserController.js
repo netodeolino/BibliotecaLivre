@@ -31,3 +31,8 @@ exports.contaSettings = function (req, res, next) {
 		res.render('settings', {title: 'Conta', dados: user});
 	});
 }
+
+exports.realizarLogout = function (req, res, next){
+	req.session.emailUser = null;
+	res.redirect('/web');
+}
