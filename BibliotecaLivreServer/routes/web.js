@@ -5,10 +5,7 @@ var RedirectPage = require('./RedirectPage');
 var UserController = require('../public/javascripts/controller/web/UserController');
 
 /* GET */
-router.get('/', function(req, res, next) {
-	res.render('home', { title: 'Biblioteca Livre' });
-});
-
+router.get('/', RedirectPage.homePage);
 router.get('/about', RedirectPage.aboutPage);
 router.get('/contact', RedirectPage.contactPage);
 

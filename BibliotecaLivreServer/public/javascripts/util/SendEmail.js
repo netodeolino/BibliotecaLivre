@@ -1,6 +1,6 @@
 'use strict';
 const nodemailer = require('nodemailer');
-var UserController = require('../../../public/javascripts/controller/UserController');
+var UserController = require('../../../public/javascripts/controller/app/UserController');
 var randomstring = Math.random().toString(36).slice(-8);
 
 
