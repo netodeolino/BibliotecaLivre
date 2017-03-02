@@ -32,7 +32,21 @@ exports.contaSettings = function (req, res, next) {
 	});
 }
 
-exports.realizarLogout = function (req, res, next){
+exports.realizarLogout = function (req, res, next) {
+	// body...
 	req.session.emailUser = null;
 	res.redirect('/web');
+}
+
+exports.saveUser = function (req, res, next) {
+	new User({
+		nome: 'Atualize seu nome',
+    	email: req.body.email,
+    	senha: req.body.senha
+	}).save(function(err, user, count){
+		if (err) {
+			console.log(err);
+		}
+		res.render('settings', {title: 'Conta', dados: user});
+	});
 }
