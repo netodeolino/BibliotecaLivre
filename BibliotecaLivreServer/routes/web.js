@@ -15,6 +15,6 @@ router.get('/cadastro', UserController.realizarCadastro);
 
 /* POST */
 router.post('/login', UserController.realizarLogin);
-//router.post('/saveuser', UserController.saveUser);
+router.post('/cadastro', UserController.saveUser);
 
 module.exports = router;

@@ -44,10 +44,13 @@ exports.realizarCadastro = function (req, res, next) {
 }
 
 exports.saveUser = function (req, res, next) {
+	// body...
+	var input = JSON.parse(JSON.stringify(req.body));
+	
 	new User({
-		nome: req.body.nome,
-    	email: req.body.email,
-    	senha: req.body.senha
+		nome: input.InputName,
+    	email: input.InputEmail,
+    	senha: input.InputSenha
 	}).save(function(err, user, count){
 		if (err) {
 			console.log(err);
