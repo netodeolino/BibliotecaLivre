@@ -10,10 +10,11 @@ router.get('/about', RedirectPage.aboutPage);
 router.get('/contact', RedirectPage.contactPage);
 router.get('/conta/:email', UserController.contaSettings);
 router.get('/logout', UserController.realizarLogout);
+router.get('/cadastro', UserController.realizarCadastro);
 
 
 /* POST */
 router.post('/login', UserController.realizarLogin);
-router.post('/saveuser', UserController.saveUser);
+//router.post('/saveuser', UserController.saveUser);
 
 module.exports = router;

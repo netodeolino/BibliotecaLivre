@@ -38,9 +38,14 @@ exports.realizarLogout = function (req, res, next) {
 	res.redirect('/web');
 }
 
+exports.realizarCadastro = function (req, res, next) {
+	// body...
+	res.render('cadastro', {title: 'Cadastro'});
+}
+
 exports.saveUser = function (req, res, next) {
 	new User({
-		nome: 'Atualize seu nome',
+		nome: req.body.nome,
     	email: req.body.email,
     	senha: req.body.senha
 	}).save(function(err, user, count){
