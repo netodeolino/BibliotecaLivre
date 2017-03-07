@@ -41,16 +41,6 @@ exports.realizarCadastro = function (req, res, next) {
 	res.render('cadastro', {title: 'Cadastro'});
 }
 
-function cancelarCadastro () {
-	// body...
-	window.location.href = '/web';
-}
-
-function cancelarUpdate () {
-	// body...
-	window.location.href = '/web';
-}
-
 exports.saveUser = function (req, res, next) {
 	// body...
 	var input = JSON.parse(JSON.stringify(req.body));
@@ -78,3 +68,14 @@ exports.deleteUser = function (req, res, next) {
 		res.redirect('/web');
 	});
 };
+
+// Pages controller
+function cancelarCadastro () {
+	// body...
+	window.location.href = '/web';
+}
+
+function cancelarUpdate () {
+	// body...
+	window.location.href = '/web';
+}
