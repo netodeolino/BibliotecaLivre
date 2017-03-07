@@ -46,6 +46,11 @@ function cancelarCadastro () {
 	window.location.href = '/web';
 }
 
+function cancelarUpdate () {
+	// body...
+	window.location.href = '/web';
+}
+
 exports.saveUser = function (req, res, next) {
 	// body...
 	var input = JSON.parse(JSON.stringify(req.body));
