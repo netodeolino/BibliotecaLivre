@@ -11,6 +11,7 @@ router.get('/contact', RedirectPage.contactPage);
 router.get('/conta/:email', UserController.contaSettings);
 router.get('/logout', UserController.realizarLogout);
 router.get('/cadastro', UserController.realizarCadastro);
+router.get('/conta/delete/:email', UserController.deleteUser);
 
 
 /* POST */

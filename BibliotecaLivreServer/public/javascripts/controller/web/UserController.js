@@ -12,11 +12,9 @@ exports.realizarLogin = function (req, res, next) {
 	User.find({email: login, senha: pass}, function (err, user) {
 		if (err) {
 			console.log(err);
-			//res.json({result: false, data: null});
 		}
 		req.session.emailUser = user[0].email;
 		res.redirect('/web');
-		//res.json({result: true, data: user});
 	});
 }
 
@@ -63,3 +61,15 @@ exports.saveUser = function (req, res, next) {
 		res.render('settings', {title: 'Conta', dados: user});
 	});
 }
+
+exports.deleteUser = function (req, res, next) {
+	// body...
+	var mail = req.params.email;
+
+	User.remove({email: mail}, function (err, user) {
+		if (err) {
+			console.log(err);
+		}
+		res.redirect('/web');
+	});
+};
