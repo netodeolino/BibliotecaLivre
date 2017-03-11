@@ -49,7 +49,7 @@ exports.saveUser = function (req, res, next) {
 		nome: input.InputName,
     	email: input.InputEmail,
     	senha: input.InputSenha
-	}).save(function(err, user, count){
+	}).save(function(err, user, count) {
 		if (err) {
 			console.log(err);
 		}
