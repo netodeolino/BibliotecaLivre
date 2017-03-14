@@ -1,8 +1,8 @@
 # Biblioteca Livre
 Aplicação para disponibilizar os livros das bibliotecas públicas das cidades brasileiras
 
-## Tecnologias e/ou Dependências
-| Nome da Tecnologia             | Versão        |
+## Tecnologias e Dependências
+| Nome                           | Versão        |
 | :----------------------------- |:-------------:|
 | Java                           | v8.0.0        |
 | Node.s                         | v6.9.4        |
