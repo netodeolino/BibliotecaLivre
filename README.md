@@ -10,7 +10,10 @@ Aplicação para disponibilizar os livros das bibliotecas públicas das cidades 
 | Express.js                     | v4.14.0       |
 
 ## Imagens
-![alt tag](https://github.com/netodeolino/BibliotecaLivre/blob/master/BibliotecaLivreServer/public/images/home_v0.0.2.png?raw=true)
+![alt tag](https://github.com/netodeolino/BibliotecaLivre/blob/master/BibliotecaLivreServer/public/images/home_v0.0.2.png?raw=true =300x500)
 
-### Em desenvolvimento
+## Em desenvolvimento
 	Ainda não disponível para download
+
+### Colabore!
+	Entre em contato para saber mais: netodeolino@gmail.com
